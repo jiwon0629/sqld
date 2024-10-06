@@ -2,3 +2,4 @@
 
 SQL(Structured Query Language)
 관계형 데이터베이스에서 데이터 조회 및 조작, DBMS 시스템 관리 기능을 명령하는 언어
+데어터 정의(DDL), 데이터 조작(DML), 데이터 제어 언어(DCL) 등으로 구분
