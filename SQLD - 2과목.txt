@@ -23,3 +23,31 @@ SQL(Structured Query Language)
 릴레이션 : 테이블간 관계를 말함
 튜플 : 하나의 행을 의미함
 키 : 식별자
+
+ERD(Entity Relationship Diagram)
+ - 테이블 간 서로의 상관 관계를 그림으로 표현할 것
+ - ERD의 구성요소에는 엔터티(Entity), 관계(Relationship), 속성(Attribute)이 있다
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
