@@ -45,7 +45,12 @@ SELECT문 구조
  - SELECT문의 내부 파싱(문법적 해석) 순서는 나열된 순서와는 다름
  - FROM > WHERE > GROUOP BY > HAVING > SELECT > ORDER BY 순서대로 실행됨
 SQL)
-
+SELECT * | 컬럼명 | 표현식
+FROM 테이블명 또는 뷰명
+WHERE 조회 조건
+GROUP BY 그룹명 컬럼명
+HAVING 그룹명 필터링 조건
+ORDER BY 정렬컬럼명
 
 
 
