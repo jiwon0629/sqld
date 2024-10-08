@@ -28,6 +28,16 @@ ERD(Entity Relationship Diagram)
  - 테이블 간 서로의 상관 관계를 그림으로 표현할 것
  - ERD의 구성요소에는 엔터티(Entity), 관계(Relationship), 속성(Attribute)이 있다
 
+DDL(Data Definition Language)
+ - CREATE, ALTER, DROP, TRUNCATE
+DML(Data Manipulation Language)
+ - INSERT, DELETE, UPDATE, MERGE
+DCL(Data Control Language)
+ - GRANT, REVOKE
+TCL(Transaction Control Language)
+ - COMMIT, ROLLBACK
+DQL(Data Query Language)
+ - SELECT
 
 
 
