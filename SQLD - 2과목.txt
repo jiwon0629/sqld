@@ -127,6 +127,10 @@ WHERE절
  - 여러 조건 동시 전달 가능
  - NULL 조회 시 IS NULL/IS NOT NULL 연산자 사용( = 연산자로 조회 불가)
 
+연산자 종류
+BETWEEN a AND b : A 와 B 사이에 있는 범위 값을 모두 검색
+IN(a, b, c) : A이거나 B이거나 C인 조건을 검색
+LIKE : 특정 패턴을 가지고 있는 조건을 검색
 
 
 
