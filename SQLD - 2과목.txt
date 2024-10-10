@@ -176,7 +176,15 @@ JOIN
 4. CROSS JOIN : 조인조건 생략 시 두 테이블의 발생 가능한 모든 행을 출력하는 조인
 5. SELF JOIN : 하나의 테이블을 두 번 이상 참조하여 연결하는 조인
 
+표준조인
+INNER JOIN, CROSS JOIN, NATURAL JOIN, OUTER JOIN
 
+INEER JOIN
+ - 내부 조인이라고 하며, 조인 조건이 일치하는 행만 추출
+
+ON절
+ - 조인할 양 컬럼의 컬럼명이 서로 다르더라도 사용 가능
+ - ON 조건의 괄호는 옵션
 
 
 
