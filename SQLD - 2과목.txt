@@ -163,6 +163,18 @@ JOIN
  - FROM절에 조인할 테이블 나열
  - 동일한 열 이름이 여러 테이블에 존재할 경우 열 이름 앞에 테이블 이름이나 테이블 Alias 붙임
 
+조인 종류
+1. 조건의 형태에 따라
+ 1) EQUI JOIN(등가 JOIN) : JOIN 조건이 동등 조건인 경우
+ 2) NON EQUI JOIN : JOIN 조건이 동등 조건이 아닌 경우
+
+2. 조인 결과에 따라
+ 1) INNER JOIN : JOIN 조건에 성립하는 데이터만 출력하는 경우
+ 2) OUTER JOIN : JOIN 조건에 성립하지 않는 데이터도 출력하는 경우
+                 (LEFT/RIGHT/FULL OUTER JOIN 으로 나뉨)
+3. NUTURAL JOIN : 조인조건 생략 시 두 테이블에 같은 이름으로 자연 연결되는 조인
+4. CROSS JOIN : 조인조건 생략 시 두 테이블의 발생 가능한 모든 행을 출력하는 조인
+5. SELF JOIN : 하나의 테이블을 두 번 이상 참조하여 연결하는 조인
 
 
 
