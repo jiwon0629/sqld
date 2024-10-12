@@ -43,8 +43,13 @@ WINDOW FUNCTION
 
 PARTITION BY절 : 출력할 총 데이터 수 변화 없이 그룹연산 수행할 GROUP BY 컬럼
 
-ROWS|RANGE BETWEEN A AND B
+1. ROWS, RANGE 차이
+1) ROWS : 값이 같더라도 각 행씩 연산
+2) RANGE : 같은 값의 경우 하나의 RANGE로 묶어서 동시 연산(DEFAULT)
 
+2. BETWEEN A AND B
+A) 시작점 정의 
+ - 
 
 
 
