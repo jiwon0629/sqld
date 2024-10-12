@@ -220,7 +220,13 @@ OUTER JOIN 종류
 3) FULL OUTER JOIN
  - 두 테이블 전체 기준으로 결과를 생성하여 중복 데이터는 삭제 후 리턴
 
+1. ROWS, RANGE 차이
+1) ROWS : 값이 같더라도 각 행씩 연산
+2) RANGE : 같은 값의 경우 하나의 RANGE로 묶어서 동시 연산(DEFAULT)
 
+2. BETWEEN A AND B
+A) 시작점 정의 
+ 
 
 
 
