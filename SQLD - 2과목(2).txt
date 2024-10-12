@@ -49,7 +49,14 @@ PARTITION BY절 : 출력할 총 데이터 수 변화 없이 그룹연산 수행�
 
 2. BETWEEN A AND B
 A) 시작점 정의 
- - 
+ - CURRENT ROW : 현재행부터
+ - UNBOUNDED PRECEDING : 처음부터(DEFAULT)
+ - N PRECEDING : N 이전부터
+
+B) 마지막 시점 정의 
+ - CURRENT ROW : 현재행부까지(DEFALUT)
+ - UNBOUNDED FOLLOWING : 마지막까지
+ - N FOLLOWING : N 이후까지
 
 
 
