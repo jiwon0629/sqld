@@ -14,5 +14,7 @@
 SQL 기본 및 활용 - 40문항 (배점 80점 / 문항당 2점)  
 과락 기준 32점 미만  
 세부사항  
- - SQL 기본 : 관계형 데이터베이스 개요
+ - SQL 기본 : 관계형 데이터베이스 개요, SELECT문, 함수, WHERE절, GROUP BY, HAVING절, ORDER BY절, 조인, 표준 조인
+ - SQL 활용 : 서브쿼리, 집합 연산자, 그룹 함수, 윈도우 함수, Top N 쿼리, 계층형 질의와 셀프 조인, PIVOT절과 UNPIVOT절, 정규 표현식
+ - 관리 구문 : DML, TCL, DDL, DCL  
 
