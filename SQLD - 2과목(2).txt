@@ -89,7 +89,9 @@ GROUP BY FUNCTIOIN
  - 연속된 행 번호
  - 동일한 순위를 인정하지 않고 단순히 순서대로 나열한대로의 순서 값 리턴
 
-
+LAG, LEAD
+ - 행 순서대로 각각 이전 값(LAG), 이후 값(LEAD) 가져오기
+ - ORDER BY절 필수
 
 
 
