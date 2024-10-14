@@ -103,7 +103,10 @@ NTILE
  - ORDER BY 필수
  - PARTITION BY를 사용하여 특정 그룹을 또 원하는 수 만큼 그룹 분리 가능
 
-
+비율관련 함수
+1) RATIO_TO_REPORT
+ - 각 값의 비율 리턴(전체 비율 또는 특정 그룹 내 비율 가능)
+ - ORDER BY 사용불가
 
 
 
