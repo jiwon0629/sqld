@@ -112,6 +112,10 @@ NTILE
  - 각 값의 누적 비율 리턴(전체 비율 또는 특정 그룹 내 비율 가능)
  - ORDER BY 필수(누적비율을 구하는 순서 정할 수 있음)
 
+3) PERCENT_RANK
+ - PERCENTILE(분위수) 출력
+ - 전체 COUNT 중 상대적 위치 출력(0 ~ 1 범위 내0
+ - ORDER BY 필수
 
 
 
