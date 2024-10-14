@@ -58,6 +58,8 @@ B) 마지막 시점 정의
  - UNBOUNDED FOLLOWING : 마지막까지
  - N FOLLOWING : N 이후까지
 
+UNION : 합집합
+INTERSECT : 교집합
 
 
 
