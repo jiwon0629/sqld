@@ -177,6 +177,12 @@ PIVOT과 UNPIVOT
 2) UNPIVOT : WIDE -> LONG
 
 PIVOT
+ - 교차표를 만드는 기능
+ - STACK 컬럼, UNSTACK 컬럼, VALUE 컬럼의 정의가 중요
+ - FROM절에 STACK, UNSTACK, VALUE 컬럼명만 정의 필요
+ - PIVOT절에 UNSTACK, VALUE 컬럼명 정의
+ - PIVOT절 IN 연산ㄴ자에 UNSTACK 컬럼 값을 정의
+ - FROM절에 선언된 컬럼 중 PIVOT절에서 선언한 VALUE컬럼, UNSTACK컬럼을 제외한 모든 컬럼은 STACK 컬럼이 됨
 
 
 
