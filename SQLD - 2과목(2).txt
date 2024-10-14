@@ -154,7 +154,10 @@ FETCH
 1) LEVEL : 각 DEPTH를 표현(시작점부터 1)
 2) CONNECT_BY_ISLEAF : LEAF NODE(최하위 노드) 여부(참 : 1, 거짓 : 0)
 
-
+계층별 질의 가상 함수
+1) CONNECT_BY_ROOT 컬럼명 : 루트노드의 해당 컬럼명의 값이 출력
+2) SYS_CONECT_BY_PATH(컬럼, 구분자) : 이어지는 경로 출력
+3) ORDER SIBLINGS BY 컬럼: 같은 LEVEL일 경우 정렬 수행
 
 
 
