@@ -81,6 +81,11 @@ GROUP BY FUNCTIOIN
  - 전체 중/특정 그룹 중 값의 순위 확인 
  - ORDER BY절 필수
 
+3) DENSE_RANK
+ - 누적순위
+ - 값이 같을 때 동일한 순위 부여 후 다음 순위가 바로 이어지는 순위 부여 방식
+
+4) ROW NUMBER
 
 
 
