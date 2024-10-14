@@ -71,7 +71,15 @@ GROUP BY FUNCTIOIN
  - 여러 GROUP BY결과를 동시에 출력(합집합)하는 기능
  - GROUP BY기능 : 그룹별 연산값만 출력되므로 전체 소계와 함께 출력될 수 없음
 
+순위 관련 함수
+1) RANK(순위)
+ RANK WITHIN GROUP
+  - 특정값에 대한 순위 확인
+  - 윈도우함수가 아닌 일반함수
 
+2) RANK() OVER()
+ - 전체 중/특정 그룹 중 값의 순위 확인 
+ - ORDER BY절 필수
 
 
 
