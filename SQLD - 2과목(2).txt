@@ -60,7 +60,7 @@ B) 마지막 시점 정의
 
 UNION : 합집합
 INTERSECT : 교집합
-
+MINUS : 차집합
 
 
 
