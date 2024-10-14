@@ -117,7 +117,15 @@ NTILE
  - 전체 COUNT 중 상대적 위치 출력(0 ~ 1 범위 내0
  - ORDER BY 필수
 
+TOP N QUERY
+ - 페이징 처리를 효과적으로 수행하기 위해 사용
+ - 전체 결과에서 특정 N 개 추출
+  예) 성적 상위자 3명
 
+TOP-N 행 추출 방법
+1. ROWNUM
+2. RANK
+3. FETCH
 
 
 
