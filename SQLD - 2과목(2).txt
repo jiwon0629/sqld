@@ -172,9 +172,11 @@ PIVOT과 UNPIVOT
  - 행과 컬럼에 유의미한 정보 전달을 목적으로 작성하는 교차표
  - 하나의 속성값이 여러 컬럼으로 분리되어 표현
 
+데이터 구조 변경
+1) PIVOT : LONG -> WIDE
+2) UNPIVOT : WIDE -> LONG
 
-
-
+PIVOT
 
 
 
