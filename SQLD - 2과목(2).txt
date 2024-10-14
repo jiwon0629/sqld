@@ -159,7 +159,14 @@ FETCH
 2) SYS_CONECT_BY_PATH(컬럼, 구분자) : 이어지는 경로 출력
 3) ORDER SIBLINGS BY 컬럼: 같은 LEVEL일 경우 정렬 수행
 
+PIVOT과 UNPIVOT
+(데이터의 구조를 변경하는 기능)
 
+데이터의 구조
+1) LONG DATA(Tidy data)
+ - 하나의 속성이 하나의 컬럼으로 정의되어 값들이 여러 행으로 쌓이는 구조
+ - RDBMS의 테이블 설계 방식
+ - 다른 테이블과의 조인 연산이 가능한 구조
 
 
 
