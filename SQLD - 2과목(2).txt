@@ -150,6 +150,9 @@ FETCH
  - START WITH : 데이터를 출력할 시작 지정하는 조건
  - CONNECT BY PRIOR : 행을 이어나갈 조건
 
+계층형 질의 가상 컬럼
+1) LEVEL : 각 DEPTH를 표현(시작점부터 1)
+2) CONNECT_BY_ISLEAF : LEAF NODE(최하위 노드) 여부(참 : 1, 거짓 : 0)
 
 
 
