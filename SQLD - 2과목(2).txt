@@ -62,7 +62,9 @@ UNION : 합집합
 INTERSECT : 교집합
 MINUS : 차집합
 
-
+VARIANCE / STDDEV
+ - 평균과 표준편차
+ - 표준편차는 평균값의 루트값
 
 
 
