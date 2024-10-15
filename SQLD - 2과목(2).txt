@@ -184,7 +184,11 @@ PIVOT
  - PIVOT절 IN 연산자에 UNSTACK 컬럼 값을 정의
  - FROM절에 선언된 컬럼 중 PIVOT절에서 선언한 VALUE컬럼, UNSTACK컬럼을 제외한 모든 컬럼은 STACK 컬럼이 됨
 
-
+UNPIVOT
+ - WIDE 데이터를 LONG 데이터로 변경하는 문법
+ - STACK 컬럼 : 이미 UNSTACK 되어 있는 여러 컬럼을 하나의 컬럼으로 STACK 시 새로 만들 컬럼이름(사용자 정의)
+ - VALUE 컬럼 : 교차표에서 셀 자리(VALUE)값을 하나의 컬럼으로 표현하고자 할 때 새로 만들 컬럼명(사용자 정의)
+ - 값 1, 값 2... : 실제 UNSTACK 되어 있는 컬럼이름들
 
 
 
