@@ -235,7 +235,11 @@ REGEXP_LIKE
 문법
 REGEXP_LIKE(원본, 찾을 문자열, [옵션])
 
-
+REGEXP_COUNT
+ - 주어진 문자열에서 특정패턴의 횟수를 반환
+ - 옵션 REGEXP_REPLACE와 동일
+문법
+REGEXP_COUNT(원본, 찾을 문자열, [옵션])
 
 
 
