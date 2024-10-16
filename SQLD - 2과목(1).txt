@@ -191,7 +191,7 @@ USING 조건절
  - Alias나 테이블 이름 같은 접두사 붙이기 불가
  - 괄호 필수
 
-NATURAL JOIN
+NATURAL JOIN(아무것도 사용하지 않음)
  - 두 테이블 간의 동일한 이름을 가지는 모든 컬럼들에 대해 EQUI JOIN을 수행
  - USING, ON, WHERE 절에서 조건 정의 불가
  - JOIN에 사용된 컬럼들은 데이터 유형이 동일해야 하며 접두사를 사용불가
