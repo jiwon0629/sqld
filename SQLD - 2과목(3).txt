@@ -4,4 +4,4 @@ DML(Data Manipulation Language)
  - 데이터의 삽입(INSERT), 수정(UPDATE), 삭제(DELETE), 병합(MERGE)
  - 저장(commit) 혹은 취소(rollback) 반드시 필요
 
-INSERT
+INSERT INTO 테이블 VALUES(값1, 값2 ...);
