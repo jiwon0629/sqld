@@ -32,3 +32,8 @@ USING 참조테이블
          SET 수정할 내용
  WHEN NOT MATCHED THEN
       INSERT VALUES (삽입할 내용)
+
+TCL(Transaction Control Language)
+ - 트랜잭션 제어어로 COMMIT, ROLLBACK이 포함됨
+ - DML에 의해 조작된 결과를 작업단위(트랜잭션) 별로 제어하는 명령어
+ 
