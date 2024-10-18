@@ -47,7 +47,11 @@ TCL(Transaction Control Language)
  - 분할 할 수 없는 최소의 단위
  - ALL OR NOTHING개념(모두 COMMIT하거나 ROLLBACK 처리해야함)
 
-
+트랜잭션의 특성
+ - 원자성(atomicity)
+ - 일관성(consistency)
+ - 독립성(isolation)
+ - 지속성(durability)
 
 
 
