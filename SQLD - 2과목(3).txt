@@ -86,7 +86,9 @@ ALTER
 
 ALTER TABLE 테이블명 ADD 컬럼명 데이터타입 [DEFAULT] [제약조건];
 
-
+데이터 타입 변경
+ - 빈 컬럼일 경우 데이터 타입 변경 가능
+ - CHAR, VARCHAR 타입일 경우 데이터가 있어도 서로 변경 가능
 
 
 
