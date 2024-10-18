@@ -70,10 +70,14 @@ DDL(Data Definiton Language)
 
 CREATE TABLE [소유자] 테이블명(컬럼1 데이터타입 [DEFAULT 기본값] [제약조건]);
 
+(테이블 복제) 
 CREATE TABLE 테이블명
 AS
 SELECT * FROM 복제 테이블명;
 
+ALTER
+ - 테이블 구조 변경
+ - 컬럼순서 변경 불가
 
 
 
