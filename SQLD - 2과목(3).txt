@@ -50,10 +50,11 @@ TCL(Transaction Control Language)
 트랜잭션의 특성
  - 원자성(atomicity)
  - 일관성(consistency)
- - 독립성(isolation)
+ - 고립성(isolation)
  - 지속성(durability)
 
-
+COMMIT
+ - 입력, 수정, 삭제한 데이터에 이상이 없을 경우 데이터를 저장하는 명령어
 
 
 
