@@ -68,7 +68,11 @@ DDL(Data Definiton Language)
  - CREATE(객체 생성), ALTER(객체 변경), DROP(객체 삭제), TRUNCATE(데이터 삭제)
  - AUTO COMMIT(명령어 수행하면 즉시 저장, 원복 불가)
 
+CREATE TABLE [소유자] 테이블명(컬럼1 데이터타입 [DEFAULT 기본값] [제약조건]);
 
+CREATE TABLE 테이블명
+AS
+SELECT * FROM 복제 테이블명;
 
 
 
