@@ -23,3 +23,12 @@ MERGE
 데이터 병합
 참조 테이블과 동일하게 맞추는 작업(참조테이블의 데이터 입력, 참조테이블의 값으로 수정 등)
  - INSERT, UPDATE, DELETE 작업을 동시에 수행
+문법)
+MERGE INTO 테이블명
+USING 참조테이블
+   ON (연결조건)
+ WHEN MATCHED THEN
+      UPDATE
+         SET 수정할 내용
+ WHEN NOT MATCHED THEN
+      INSERT VALUES (삽입할 내용)
