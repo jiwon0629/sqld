@@ -107,7 +107,8 @@ ALTER TABLE table_name RENAME COLUMN 기존컬럼명 TO 새 컬럼명;
  - 동시 삭제 불가
 ALTER TABLE test DROP COLUMN col_a;
 
-
+DROP TABLE 테이블명 [PURGE];
+PURGE로 테이블 삭제 시 RECYCLEBIN에서 조회 불가
 
 
 
