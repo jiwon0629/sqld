@@ -102,6 +102,12 @@ ALTER TABLE table_name RENAME COLUMN 기존컬럼명 TO 새 컬럼명;
 
 문법에 컬럼이 들어가면 동시에 여러 개 불가능
 
+컬럼 삭제
+ - 데이터 존재 여부와 상관없이 언제나 가능
+ - 동시 삭제 불가
+ALTER TABLE test DROP COLUMN col_a;
+
+
 
 
 
