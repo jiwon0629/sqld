@@ -96,7 +96,11 @@ DEFAULT값 변경
  - 이미 데이터가 존재하는 테이블에 DEFAULT 값 선언 시 기존 데이터 수정 안됨(이후 입력된 데이터부터 적용)
  - DEFAULT 값 해제 시 DEFAULT 값을 NULL로 선언
 
+컬럼 이름 변경
+ - 동시 여러 컬럼 이름 변경 불가(괄호 전달 불가)
+ALTER TABLE table_name RENAME COLUMN 기존컬럼명 TO 새 컬럼명;
 
+문법에 컬럼이 들어가면 동시에 여러 개 불가능
 
 
 
