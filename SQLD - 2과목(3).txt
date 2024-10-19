@@ -192,8 +192,17 @@ AS
 뷰의 삭제
 DROP VIEW 뷰명;
 
-
-
+시퀀스(SEQUENCE)
+ - 자동으로 연속적인 숫자 뷰여해주는 객
+문법
+CREATE SEQUENCE 시퀀스명
+INCREMENT BY       -- 증가값(DEFAULT : 1)
+START WITH         -- 시작값(DEFAULT : 1)
+MAXVALUE           -- 마지막값(증가시퀀스), 재사용시 시작값(감소시퀀스)
+MINVALUE           -- 재사용시 시작값(증가시퀀스), 마지막값(감소시퀀스)
+CYCLE | NOCYCLE    -- 시퀀스 번호 재사용(DEFAULT : NOCYCLE)
+CACHE N            -- 캐시값(DEFAULT : 20)    =>   메모리에 미리 올려놓는 값
+;
 
 
 
