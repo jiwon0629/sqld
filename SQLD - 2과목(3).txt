@@ -204,10 +204,13 @@ CYCLE | NOCYCLE    -- 시퀀스 번호 재사용(DEFAULT : NOCYCLE)
 CACHE N            -- 캐시값(DEFAULT : 20)    =>   메모리에 미리 올려놓는 값
 ;
 
+시노님(SYNONYM)
+ - 테이블 별칭 생성
+문법
+CREATE [OR REPLACE] [PUBLIC] DYNONYM 별칭 FOR 테이블명;
 
-
-
-
+ex) HR 계정에서 SCOTT.EMP를 EMP로 조회하는 방법
+CREATE SYNONYM EMP FOR SCOTT.EMP;
 
 
 
