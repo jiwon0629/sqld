@@ -253,7 +253,10 @@ GRANT role TO hr;
 SELECT *
   FROM SCOTT.EMP;
 
-
+<롤을 통해 부여한 권한 직접 회수(SCOTT에서 실행)>
+REVOKE SELECT ON student FROM hr;
+ - ROLE을 통해 부여한 권한은 직접 회수 불가
+ - ROLE을 통한 회수만 가능
 
 
 
