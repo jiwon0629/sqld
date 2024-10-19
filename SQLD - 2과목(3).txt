@@ -240,10 +240,18 @@ REVOKE 권한 ON 테이블명 FROM 유저;
 롤(ROLE)
  - 권한의 묶음(생성 가능한 객체)
  문법
-CREATE ROLE 롤이름;
+<생성>
+CREATE ROLE role(롤이름);
 
+<롤에 권한 담기>
+GRANT SELECT ON emp TO role;
 
+<롤 부여>
+GRANT role TO hr;
 
+<hr 계정에서 수행>
+SELECT *
+  FROM SCOTT.EMP;
 
 
 
