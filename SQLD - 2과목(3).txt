@@ -140,8 +140,14 @@ CREATE TABLE [소유자] 테이블명(
 ...
 );
 
+2) 이미 생성된 컬럼에 제약조건만 추가
+ALTER TABLE 테이블명 ADD 컬럼명 데이터타입 [DEFAULT 기본값] [제약조건];
 
+3) 이미 생성된 컬럼에 제약조건만 추가
+ALTER TABLE 테이블명 ADD [CONSTRAINT 제약조건명] 제약조건종류;
 
+4) 제약조건 삭제
+ALTER TABLE 테이블명 DROP CONSTRAINT 제약조건명;
 
 
 
