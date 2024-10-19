@@ -149,7 +149,14 @@ ALTER TABLE 테이블명 ADD [CONSTRAINT 제약조건명] 제약조건종류;
 4) 제약조건 삭제
 ALTER TABLE 테이블명 DROP CONSTRAINT 제약조건명;
 
-
+UNIQUE
+ - 중복을 허용하지 않음
+ - NULL은 허용
+예제) UNIQUE KEY가 생성된 컬럼의 값 입력
+CREATE TABLE test(
+no      NUMBER,
+subject VARCHAR2(20) UNIQUE);
+값을 입력할 때 NULL은 가능하지만 중복은 안된다.
 
 
 
