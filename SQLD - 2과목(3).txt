@@ -158,7 +158,11 @@ no      NUMBER,
 subject VARCHAR2(20) UNIQUE);
 값을 입력할 때 NULL은 가능하지만 중복은 안된다.
 
-
+NOT NULL
+ - 이미 만들어진 컬럼에 NOT NULL 선언 시 제약조건 생성이 아닌 컬럼 수정(MODIFY)으로 해
+예제) NOT NULL 선언
+ALTER TABLE test MODIFY col12 NOT NULL;  =>  컬럼 수정으로 NOT NULL 처리
+ALTER TABLE test MODIFY col12 CONSTRAINT pro NOT NULL;  =>  제약조건 이름 부여 가능
 
 
 
