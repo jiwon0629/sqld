@@ -58,6 +58,34 @@ Single Type : 슈퍼타입과 서브타입을 하나의 테이블로 도출한�
 다음 주어진 ERD 관계에 대한 설명으로 옳은 것을 고르시오.
 10번 문제
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+11번 ~ 20번
+
+11. 다음에서 설명하는 DDL문으로 올바른 것은?
+[ Mytset 테이블 컬럼을 데이터 타입 조건으로 not null을 기본으로 수정하시오 ]
+1. ALTER table Mytest alter column 컬럼명 not null
+2. ALTER table Mytest add column 컬럼명 default not null
+3. ALTER table Mytest modify (컬럼명 not null)
+4. ALTER table Mytest add constraint column 컬럼명 default not null
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
