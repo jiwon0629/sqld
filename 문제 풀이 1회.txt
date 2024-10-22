@@ -68,6 +68,8 @@ Single Type : 슈퍼타입과 서브타입을 하나의 테이블로 도출한�
 2. ALTER table Mytest add column 컬럼명 default not null
 3. ALTER table Mytest modify (컬럼명 not null)
 4. ALTER table Mytest add constraint column 컬럼명 default not null
+답 : 3번
+해설) 테이블에 존재하는 컬럼의 데이터 유형, 디폴트 값, NOT NULL에 대한 제약조건을 변경하는 명령어는 ALTER문의 modify이다.
 
 
 
