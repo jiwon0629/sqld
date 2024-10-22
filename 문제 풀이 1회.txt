@@ -62,7 +62,7 @@ Single Type : 슈퍼타입과 서브타입을 하나의 테이블로 도출한�
 
 11번 ~ 20번
 
-11. 다음에서 설명하는 DDL문으로 올바른 것은?
+11. 다음에서 설명하는 DDL문으로 올바른 것은? (오라클)
 [ Mytset 테이블 컬럼을 데이터 타입 조건으로 not null을 기본으로 수정하시오 ]
 1. ALTER table Mytest alter column 컬럼명 not null
 2. ALTER table Mytest add column 컬럼명 default not null
@@ -70,8 +70,8 @@ Single Type : 슈퍼타입과 서브타입을 하나의 테이블로 도출한�
 4. ALTER table Mytest add constraint column 컬럼명 default not null
 답 : 3번
 해설) 테이블에 존재하는 컬럼의 데이터 유형, 디폴트 값, NOT NULL에 대한 제약조건을 변경하는 명령어는 ALTER문의 modify이다.
-
-
+오라클 : ALTER TABLE 테이블명 MODIFY (컬럼명 바꿀자료형 [default여부] [NULL여부],...);
+SQL SERVER : ALTER TABLE 테이블명 ALTER COLUMN 컬럼명 바꿀자료형 [default여부] [NULL여부];
 
 
 
