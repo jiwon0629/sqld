@@ -107,6 +107,8 @@ INSERT INTO Mytest VALUES(20);
 ROLLBACK TO SV2;
 COMMIT;
 SELECT * FROM mytest;
+답 : 7 7 9
+만약 ROLLBACK만 있었다면 CREATE문 아래의 내용은 전부 사라지고 TABLE만 남는다.
 
 
 
