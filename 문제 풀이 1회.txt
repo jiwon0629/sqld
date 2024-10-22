@@ -84,9 +84,11 @@ SQL SERVER : ALTER TABLE 테이블명 ALTER COLUMN 컬럼명 바꿀자료형 [de
 답 : 3번
 해설) COMMIT과 ROLLBACK문은 TCL(Transaction Control Language)이고 DDL에는 CREATE, ALTER, RENAME, DROP등이 있다.
 
-
-
-
+13. 다음 중 Mytest 테이블에 JOB 컬럼을 추가하는 방법으로 올바른 것을 고르시오. (단, 데이터타입, 제약조건 등은 따로 고려하지 않음)
+1. ALTER table Mytest alter add column JOB
+2. ALTER table Mytest modify add JOB
+3. ALTER table Mytest add JOB
+4. ALTER table Mytest add constraint JOB
 
 
 
