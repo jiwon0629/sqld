@@ -70,8 +70,19 @@ Single Type : 슈퍼타입과 서브타입을 하나의 테이블로 도출한�
 4. ALTER table Mytest add constraint column 컬럼명 default not null
 답 : 3번
 해설) 테이블에 존재하는 컬럼의 데이터 유형, 디폴트 값, NOT NULL에 대한 제약조건을 변경하는 명령어는 ALTER문의 modify이다.
+sql일 경우에는 1번이 답이다.
+2번은 문법 오류
+4번은 add constraint - 제약조건 추가
 오라클 : ALTER TABLE 테이블명 MODIFY (컬럼명 바꿀자료형 [default여부] [NULL여부],...);
 SQL SERVER : ALTER TABLE 테이블명 ALTER COLUMN 컬럼명 바꿀자료형 [default여부] [NULL여부];
+
+12. 다음 중 DDL 문이 아닌 것은?
+1. CREATE TABLE
+2. RENAME
+3. COMMIT
+4. ALTER
+답 : 3번
+해설) COMMIT과 ROLLBACK문은 TCL(Transaction Control Language)이고 DDL에는 CREATE, ALTER, RENAME, DROP등이 있다.
 
 
 
