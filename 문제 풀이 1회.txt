@@ -110,6 +110,26 @@ SELECT * FROM mytest;
 답 : 7 7 9
 만약 ROLLBACK만 있었다면 CREATE문 아래의 내용은 전부 사라지고 TABLE만 남는다.
 
+15. 다음 주어진 CUBE문과 동일한 것은?
+[ GROUP BY CUBE(DEPTNO, JOB); ]
+1. GROUP BY ROLLUP(DEPTNO, JOB);
+2. GROUP BY GROUPING SETS(DEPTNO, JOB, (DEPTNO, JOB), ());
+3. GROUP BY DEPTNO UNION GROUP BY JOB UNION GROUPBY (DEPTNO, JOB)
+4. GROUP BY (DEPTNO, JOB, (DEPTNO, JOB), ());
+답 : 
+해설)
+그룹 함수 중 CUBE는 CUBE 함수의 인자로 전달
+
+
+
+
+
+
+
+
+
+
+
 
 
 
