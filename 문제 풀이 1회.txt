@@ -92,11 +92,21 @@ SQL SERVER : ALTER TABLE 테이블명 ALTER COLUMN 컬럼명 바꿀자료형 [de
 답 : 3번
 해설) 기존 테이블에 필요한 컬럼을 추가하는 명령어는 add이다.
 
-
-
-
-
-
+14. 다음 SQL문의 실행 결과로 올바른 것은?
+Create table Mytest (COL1 number(10));
+INSERT INTO Mytest VALUES(2);
+INSERT INTO Mytest VALUES(2);
+SAVEPOINT SV1;
+UPDATE Mytest SET COL1=7 WHERE COL1=2;
+INSERT INTO Mytest VALUES(9);
+SAVEPOINT SV2;
+DELETE Mytest WHERE COL1=7;
+INSERT INTO Mytest VALUES(11);
+SAVEPOINT SV3;
+INSERT INTO Mytest VALUES(20);
+ROLLBACK TO SV2;
+COMMIT;
+SELECT * FROM mytest;
 
 
 
