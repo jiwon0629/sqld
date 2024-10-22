@@ -116,11 +116,13 @@ SELECT * FROM mytest;
 2. GROUP BY GROUPING SETS(DEPTNO, JOB, (DEPTNO, JOB), ());
 3. GROUP BY DEPTNO UNION GROUP BY JOB UNION GROUPBY (DEPTNO, JOB)
 4. GROUP BY (DEPTNO, JOB, (DEPTNO, JOB), ());
-답 : 
+답 : 2번
 해설)
-그룹 함수 중 CUBE는 CUBE 함수의 인자로 전달
-
-
+그룹 함수 중 CUBE는 CUBE 함수의 인자로 전달된 컬럼에 대해서 모든 결합 가능한 집계를 계산한다.
+GROUPING SETS 함수는 GROUP BY에 나오는
+그룹함수 : ROLLUP, CUBE(조합이 가능한 모든 경우의 수만큼 집계를 한다), GROUPING SETS
+3번 GROUP BY 뒤에 UNION 사용 못 함. 전체집계가 없음.
+4.
 
 
 
