@@ -127,6 +127,27 @@ GROUPING SETS 함수는 GROUP BY에 나오는 컬럼의 순서와 관계없이 �
 GROUP BY에 중복된 것들이 있으면 없애고 하나로만 봐도 된다.
 ex) GROUP BY A, B, (A, B), ();  =  GROUP BY A, B, ();
 
+16. 다음 주어진 테이블에 대해서 아래와 같은 SQL문을 수행하였을 때 반환되는 ROW 값의 수는 무엇인가?
+select * from A1
+union
+select * from B1
+minus
+select * from C1;
+[A1]
+COL1
+1
+2
+3
+4
+[B1]
+COL1
+3
+5
+[C1]
+4
+5
+답 : 3개
+해설)1,2,3,4 에서 UNION하면 1,2,3,4,5 MINUS하면 1,2,3
 
 
 
