@@ -4,4 +4,12 @@
 3. FROM - WHERE - GROUP BY - SELECT - HAVING - ORDER BY
 4. FROM - WHERE - GROUP BY - HAVING - SELECT - ORDER BY
 답 : 4번
-해설) FROM구는 테이블을 선택하고 WHERE 조건을 만족하도록 필터링한다. 그 다음 GROUP BY와 HAVING구가 실행되고 SELECT구로 데이터를 인출한 후에 ORDER BY로 정렬한다.
+해설) FROM구는 테이블을 선택하고 WHERE 조건을 만족하도록 필터링한다. 
+그 다음 GROUP BY와 HAVING구가 실행되고 SELECT구로 데이터를 인출한 후에 ORDER BY로 정렬한다.
+
+22. 주어진 테이블에서 아래의 SQL문과 다른 값을 반환하는 SQL문을 고르시오
+답 : 3번
+
+23. 사용자 A가 어떤 릴레이션에 대한 SELECT권한을 WITH GRANT OPTION과 함께 사용자 B에게 허가하고, 사용자 B가 그 릴레이션에 대한
+SELECT 권한을 WITH GRANT OPTION과 함께 사용자 C에게 허가하고, 사용자 C가 그 릴레이션에 대한 SELECT 권한을 WITH GRANT OPTION과 
+함께 사용자 D에게 허가했을 때, 사용자 A가 사용자 B로부터 SELECT 권한을 취소하면 사용자 C와 D의 권한은 어떻게 되는가?
