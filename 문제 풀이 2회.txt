@@ -27,3 +27,14 @@ SELECT 권한을 WITH GRANT OPTION과 함께 사용자 C에게 허가하고, 사
 4. 이행 투명성
 답 : 4번
 해설) 분산 데이터베이스 투명성은 분할, 위치, 지역사상, 중복 투명성 등이 있다.
+
+25. 다음 중 DROP TABLE 테이블명 [CAS-CADE CONSTRAINT]에 대한 설명을 옳은 것은?
+1. 테이블의 구조만 삭제된다.
+2. CASCADE는 Oracle, SQL Server, MySQL, PostgreSQL 모두 지원한다.
+3. SQL Server에서는 테이블을 먼저 삭제한 뒤 참조하는 FOREIGN KEY 제약조건, 참조하는 테이블을 삭제한다.
+4. CASCADE CONSTRINT 옵션은 해당 테이블에서 참조되는 제약조건도 삭제를 수행한다.
+답 : 4번
+해설) CASCADE CONSTRINT 옵션은 해당 테이블과 관계가 있었던 참조되는 제약조건에 대해서도 삭제를 수행한다.
+1. DROP 명령어는 테이블의 모든 데이터 및 구조를 삭제한다.
+2. CASCADE는 Oracle에서만 옵션으로 존재하고 SQL Sever에서는 존재하지 않는다.
+3. SQL Server에서는 참조하는 FOREIGN KEY 제약조건, 참조하는 테이블을 먼저 삭제한 후에 해당 테이블을 삭제한다.
