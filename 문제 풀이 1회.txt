@@ -166,8 +166,11 @@ ORDER STBLINGS BY 메뉴 id ;
 
 18. 
 
-
-
+19. 다음 중 Mytest 테이블에서 부서코드 400부터 상위 부서를 찾는 SQL문은?
+답 : 
+SELECT 상위 부서코드
+FROM Mytest
+WHERE 400 >= 부서 코드
 
 
 
