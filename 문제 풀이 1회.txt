@@ -122,8 +122,9 @@ SELECT * FROM mytest;
 GROUPING SETS 함수는 GROUP BY에 나오는
 그룹함수 : ROLLUP, CUBE(조합이 가능한 모든 경우의 수만큼 집계를 한다), GROUPING SETS
 3번 GROUP BY 뒤에 UNION 사용 못 함. 전체집계가 없음.
-4.
-
+4번도 문법 오류
+GROUP BY에 중복된 것들이 있으면 없애고 하나로만 봐도 된다.
+ex) GROUP BY A, B, (A, B), ();  =  GROUP BY A, B, ();
 
 
 
