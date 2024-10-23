@@ -1,0 +1,7 @@
+21. 다음 중 SQL문의 실행 순서로 올바른 것은?
+1. FROM - WHERE - GROUP BY - HAVING - ORDER BY - SELECT
+2. FROM - WHERE - HAVING - GROUP BY - ORDER BY - SELECT
+3. FROM - WHERE - GROUP BY - SELECT - HAVING - ORDER BY
+4. FROM - WHERE - GROUP BY - HAVING - SELECT - ORDER BY
+답 : 4번
+해설) FROM구는 테이블을 선택하고 WHERE 조건을 만족하도록 필터링한다. 그 다음 GROUP BY와 HAVING구가 실행되고 SELECT구로 데이터를 인출한 후에 ORDER BY로 정렬한다.
