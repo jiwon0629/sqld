@@ -164,6 +164,7 @@ START WITH 상위메뉴id IS NULL    --- 우리가 어떤 것을 기준으로 �
 CONNECT BY  상위메뉴id = PRIOR 메뉴id    --- 전개를 한 조건. PRIOR가 붙은 쪽이 기준이다(메뉴 ID)
 ORDER STBLINGS BY 메뉴 id ;
 
+18. 
 
 
 
