@@ -47,7 +47,15 @@ SELECT 권한을 WITH GRANT OPTION과 함께 사용자 C에게 허가하고, 사
 답 : 2번
 2번은 DML에 대한 설명이다.
 
-
+27. 다음 보기의 SELECT문을 실행했을 때 그 결과가 다른 하나는?
+Mytest테이블, ID [가, 나, 다, 라, 마], CNT [5, NULL, 5, NULL, 10 ]
+1. SELECT COUNT( nvl(CNT, 0)) FROM Mytest;
+2. SELECT SUM( nvl(CNT, 0))/4 FROM Mytest;
+3. SELECT AVG( nvl(CNT, 0)) FROM Mytest;
+4. SELECT MIN( nvl(CNT, 5)) FROM Mytest;
+답 : 3번
+해설)
+NVL은 값이 NULL일때 그 대체 값을 출력할 수 있게한다.
 
 
 
