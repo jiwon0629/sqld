@@ -80,8 +80,28 @@ FROM Mytest;
 해설) 결과값에서 중복된 등수 2등 다음에 바로 다음 등수인 3등이 왔으므로 빈칸에는 DENSE_RANK가 와야 한다.
 DENSE_RANK() : 중복된 순위 다음에는 바로 다음 순서를 부여한다.
 
-
-
+30. 다음 보기는 WINDOW 함수에 대한 사용 방법이다. 가장 올바르지 않은 SQL문은 무엇인가?
+1. SUM (급여) OVER()
+2. SUM(급여) OVER(
+PARTITION BY JOB ORDER BY EMPNO
+RANGE BETWEEN UNBOUNDED PRECEDING
+AND UNBOUNDED FOLLOWING) SAL
+3. SUM(급여) OVER(
+PARTITION BY JOB ORDER BY EMPNO
+RANGE BETWEEN UNBOUNDED PRECEDING
+AND UNBOUNDED PRECEDING) SAL
+2. SUM(급여) OVER(
+PARTITION BY JOB ORDER BY JOB
+RANGE BETWEEN UNBOUNDED PRECEDING
+AND CURRENT ROW) SAL
+답 : 
+해설) 3번 보기에서 UNBOUNDED PRECEDING은 end point에 사용될 수 없다. 즉, UNBOUNDED PRECEDING은 윈도우의 시작 위치가 첫 번째 행이다.
+RANGE BETWEEN start_point AND end_point
+ - start_point는 end_point와 같거나 작은 값이 들어간다.
+ - Default 값은 RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+ - UNBOUNDED PRECEDING : start_point만 들어갈 수 있으며, 파티션의 first row
+ - UNBOUNDED FOLLOWING : end_point만 들어갈 수 있으며, 파티션의 last row
+ - CURRENT ROW : start, end_point 둘 다 가능하며, 윈도우는 CURRENT ROW에서 start하거나 end한다.
 
 
 
