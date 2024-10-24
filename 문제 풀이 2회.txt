@@ -54,7 +54,7 @@ Mytest테이블, ID [가, 나, 다, 라, 마], CNT [5, NULL, 5, NULL, 10 ]
 3. SELECT AVG( nvl(CNT, 0)) FROM Mytest;
 4. SELECT MIN( nvl(CNT, 5)) FROM Mytest;
 답 : 3번
-해설)
+해설)1, 2, 4번 보기는 결과값이 5로 출력되지만 3번 보김과값 4(20/5)를 반환한다.
 NVL은 값이 NULL일때 그 대체 값을 출력할 수 있게한다.
 
 
