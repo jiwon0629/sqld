@@ -65,7 +65,20 @@ SELECT CLASS, count(distinct NAME) AS "Result"
 FROM Mytest
 GROUP BY CLASS
 
-
+29. 다음은 WINDOW 함수를 사용해서 순위를 구한 것이다. 다음 중 빈칸의 내용으로 올바른 것은?
+Mytest 테이블, 이름 [A, B, C, D, E, F], 급여 [300, 260, 260, 200, 150, 100]
+결과 순위[1, 2, 2, 3, 4, 5], 이름[A, B, C, D, E, F], 급여 [300, 260, 260, 200, 150, 100]
+SELECT (  ) OVER
+(ORDER BY 급여 desc)
+as 순위, 이름, 급여
+FROM Mytest;
+1. RANK()
+2. DENSE_RANK()
+3. ROW_NUMBER()
+4. ROW()
+답 : 2번
+해설) 결과값에서 중복된 등수 2등 다음에 바로 다음 등수인 3등이 왔으므로 빈칸에는 DENSE_RANK가 와야 한다.
+DENSE_RANK() : 중복된 순위 다음에는 바로 다음 순서를 부여한다.
 
 
 
