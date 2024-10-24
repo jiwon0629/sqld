@@ -57,7 +57,13 @@ Mytest테이블, ID [가, 나, 다, 라, 마], CNT [5, NULL, 5, NULL, 10 ]
 해설)1, 2, 4번 보기는 결과값이 5로 출력되지만 3번 보김과값 4(20/5)를 반환한다.
 NVL은 값이 NULL일때 그 대체 값을 출력할 수 있게한다.
 
-
+28. 다음 문제에 주어진 결과값을 반환하는 SQL문은?
+Mytest 테이블, CLASS [ A, A, A, B, B, C, C], NAME [조조, 조조, 조조, 유비, 관우, 여포, 여포]
+결과 CLASS [A, B, C], Result[1, 2, 1]
+답 : 
+SELECT CLASS, count(distinct NAME) AS "Result"
+FROM Mytest
+GROUP BY CLASS
 
 
 
