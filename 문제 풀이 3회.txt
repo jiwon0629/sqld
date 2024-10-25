@@ -1,2 +1,7 @@
 1. 다음 중 파티션에 대한 설명으로 올바르지 않은 것은?
 1. RANK() OVER (PPARTITION BY JOB ORDER BY SAL ASC) JOB_RANK
+ : 각 JOB 별 SAL이 낮은 순서대로 순위가 부여된다.
+2. SUM(SAL) OVER(PARTITION BY MGR ORDER BY SAL RANGE UNBOUNDED PRECEDING)
+ : 각 MGR별 현재 행부터 파티션 내 첫번째 행까지의 SAL의 합계를 계산한다.
+3. COUNT(*) OVER(ORDER BY SAL) RANGE BETWEEN 10 PRECEDING AND 150 FOLLOWING)
+ : SAL을 기준으로 현재 행에서의 SAL의 -10에서 +150 사이의 급여를 가지는 행의 수를 계산한다.
