@@ -5,3 +5,5 @@
  : 각 MGR별 현재 행부터 파티션 내 첫번째 행까지의 SAL의 합계를 계산한다.
 3. COUNT(*) OVER(ORDER BY SAL) RANGE BETWEEN 10 PRECEDING AND 150 FOLLOWING)
  : SAL을 기준으로 현재 행에서의 SAL의 -10에서 +150 사이의 급여를 가지는 행의 수를 계산한다.
+4. AVG(SAL) OVER (PARTITION BY MGR ORDER BY TODAY ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING)
+ : 각 MGR 별로 앞의 한 건, 현재 행, 뒤의 한 건 사이에서 SAL의 평균을 계산한다.
