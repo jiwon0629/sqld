@@ -1,4 +1,4 @@
-1. 다음 중 파티션에 대한 설명으로 올바르지 않은 것은?
+31. 다음 중 파티션에 대한 설명으로 올바르지 않은 것은?
 1. RANK() OVER (PPARTITION BY JOB ORDER BY SAL ASC) JOB_RANK
  : 각 JOB 별 SAL이 낮은 순서대로 순위가 부여된다.
 2. SUM(SAL) OVER(PARTITION BY MGR ORDER BY SAL RANGE UNBOUNDED PRECEDING)
@@ -7,3 +7,7 @@
  : SAL을 기준으로 현재 행에서의 SAL의 -10에서 +150 사이의 급여를 가지는 행의 수를 계산한다.
 4. AVG(SAL) OVER (PARTITION BY MGR ORDER BY TODAY ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING)
  : 각 MGR 별로 앞의 한 건, 현재 행, 뒤의 한 건 사이에서 SAL의 평균을 계산한다.
+답 : 4번
+해설) 4번 보기는 각 MGR 별로 SAL의 평균을 계산하기 전에 TODAY를 기준으로 정렬을 수행한 다음에 
+SAL의 평균을 계산한다. 즉, 각 MGR별 TODAY 기준으로 정렬하였을 때 파티션 내에서 앞의 한 건, 
+핸재 행, 뒤의 한 건 사이의 급여의 평균을 계산한다.
