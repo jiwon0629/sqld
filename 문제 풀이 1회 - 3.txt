@@ -66,3 +66,11 @@ NULL은 산술 비교 연산이 불가능하다.
 2번은 SEARCHED CASE이니까 A.COL1 IS NULL을 보면 THEN -1이 된다. COL1[-1,0,-1,0,-1]
 3번은 DECODE니까 A.COL1이 NULL이면 -1리턴 COL1[-1,0,-1,0,-1]
 4번 NVL이니까 A.COL1이 NULL이면 -1리턴 COL1[-1,0,-1,0,-1]
+
+34. 다음 보기의 결과값과 동일하게 반환하는 SLQ문은?
+답 : 4번
+SELECT *
+FROM Mytest 
+WHERE 회원번호 =103
+ORDER BY 주문금액 DESC
+
