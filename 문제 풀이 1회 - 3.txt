@@ -13,3 +13,22 @@ SAL의 평균을 계산한다. 즉, 각 MGR별 TODAY 기준으로 정렬하였�
 핸재 행, 뒤의 한 건 사이의 급여의 평균을 계산한다.
 
 32. 다음에서 주어진 Mytest 테이블에서 SQL문을 실행했을 때 결괏값과 같은 SQL문은?(단 UNION은 정렬도 진행하는 것으로 한다)
+Mytest 테이블 JOB_ID [ manager, manager, manager, helper, helper, helper ], SALARY [1300, 1500, 1900, 1000, 1500, 2500]
+결과 JOB_ID [helper, helper, manager, manager], SALARY [1000, 2500, 1300, 1900]
+1. SELECT *
+FROM (SELECT JOB_ID, MAX(SALARY) 
+FROM Mytest 
+GROUP BY JOB_ID UNION
+SELECT JOB_ID, MIN(SALARY) 
+FROM Mytest
+GROUP BY JOB_ID);
+2. SELECT *
+FROM (SELECT JOB_ID, MAX(SALARY) 
+FROM Mytest 
+GROUP BY SALARY UNION
+SELECT JOB_ID, MIN(SALARY) 
+FROM Mytest
+GROUP BY SALARY);
+
+
+답 : 1번
