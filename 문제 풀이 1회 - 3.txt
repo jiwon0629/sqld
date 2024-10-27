@@ -184,7 +184,26 @@ ON 뒤에 조건을 준다.
 일반조건들은 WHERE로 작성한다.
 1=1은 참이라는 의미이다.
 
+40. 아래와 같은 두 개의 테이블이 있을 때 아래의 SQL 결과 건수를 알맞게 나열한 것은?
+MytestA 테이블 COL1 [관우, 유비, 조자룡, 동탁], COL2 [100, 200, 300, 400], KEY1 [B, C, D, E]
+MytestB 테이블 KEY2 [A, B, C], COL2 [100, 200, 300], COL3 [조조, 관우, 유비]
+SQL문
+SELECT *
+FROM MytestA A INNER JOIN MytestB
+ON (A.KEY1 = B.KEY2);
+SELECT *
+FROM MytestA A LEFT OUTER JOIN MytestB
+ON (A.KEY1 = B.KEY2);
+SELECT *
+FROM MytestA A RIGHT OUTER JOIN MytestB
+ON (A.KEY1 = B.KEY2);
+SELECT *
+FROM MytestA A FULL OUTER JOIN MytestB
+ON (A.KEY1 = B.KEY2);
+SELECT *
+FROM MytestA A CROSS JOIN MytestB B;
 
+INNER JOIN은 A * B이므로 A.KEY1 = B.KEY2는 B, C 2개이다.
 
 
 
