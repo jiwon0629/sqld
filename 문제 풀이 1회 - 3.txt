@@ -56,3 +56,8 @@ END AS DATA FROM Mytest A;
 AS DATA FROM Mytest A;
 4. SELECT NVL(A.col1, -1)
 AS DATA FROM Mytest A;
+답 : 
+해설) CASE문법
+[SIMPLE CASE] CASE 컬럼 WHEN 비교 THEN 'A'..은 CASE WHEN 컬럼 = 비교 THEN 'A'..와 같음
+[SEARCHED CASE] CASE WHEN 컬럼 = 비교 THEN 'A'..
+= 외에 다른 비교도 가능
