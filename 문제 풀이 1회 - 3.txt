@@ -48,7 +48,7 @@ GROUP BY SALARY);
 
 33. 다음 보기의 SQL문을 실행했을 때 결과값이 다른 하나는?
 Mytest 테이블 COL1 [NULL, 0, NULL, 0, NULL]
-1. SELECT CASE A, COL1 WHEN NULL THEN -1 ELSE 0
+1. SELECT CASE A.COL1 WHEN NULL THEN -1 ELSE 0
 END AS DATA FROM Mytest A;
 2. SELECT CASE WHEN A, COL1 IS NULL THEN -1 ELSE 0
 END AS DATA FROM Mytest A;
@@ -56,8 +56,13 @@ END AS DATA FROM Mytest A;
 AS DATA FROM Mytest A;
 4. SELECT NVL(A.col1, -1)
 AS DATA FROM Mytest A;
-답 : 
+답 : 1
 해설) CASE문법
 [SIMPLE CASE] CASE 컬럼 WHEN 비교 THEN 'A'..은 CASE WHEN 컬럼 = 비교 THEN 'A'..와 같음
 [SEARCHED CASE] CASE WHEN 컬럼 = 비교 THEN 'A'..
 = 외에 다른 비교도 가능
+NULL은 산술 비교 연산이 불가능하다.
+1번은 NULL과 산술 비교 연산이 불가하므로 THEN으로 빠지지 않고 ELSE로 빠져 모두 0으로 나온다. COL1[0,0,0,0,0]
+2번은 SEARCHED CASE이니까 A.COL1 IS NULL을 보면 THEN -1이 된다. COL1[-1,0,-1,0,-1]
+3번은 DECODE니까 A.COL1이 NULL이면 -1리턴 COL1[-1,0,-1,0,-1]
+4번 NVL이니까 A.COL1이 NULL이면 -1리턴 COL1[-1,0,-1,0,-1]
