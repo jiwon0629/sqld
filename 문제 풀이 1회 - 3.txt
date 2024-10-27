@@ -108,7 +108,19 @@ ORDER BY COL1 DESC, COL2 DESC, COL3 DESC;
 COL2를 내림차순 해보면 10으로 동일한 열이 있으므로
 COL3을 내림차순 하면 14 다음 12 이므로 주의해야한다.
 
-
+37. 다음 보기의 결과값을 얻기 위한 SQL문을 작성하시오.
+Mytest 테이블 COL1 [NULL, 0, 10, 11, 13], COL2 [0, NULL, 20, 21, 22], COL3 [30, 0, NULL, 31, 32]
+결과 A[13], B[0], C[34]
+SELECT
+(  ) AS A,
+(  ) AS B,
+(  ) AS C
+FROM Mytest
+1. MAX(COL2), MIN(COL2), SUM(COL1)
+2. MAX(COL1), MIN(COL2), SUM(COL1)
+3. MAX(COL1), MIN(COL2), SUM(COL2)
+4. MIN(COL1), MAX(COL2), MAX(COL1)
+답 : 2번
 
 
 
