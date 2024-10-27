@@ -74,3 +74,55 @@ FROM Mytest
 WHERE 회원번호 =103
 ORDER BY 주문금액 DESC
 
+35. 다음의 Mytest 테이블에 데이터를 입력 시 에러가 발생하는 것은?
+Mytest
+CREATE TABLE Mytest
+(
+A NUMBER(10) PRIMARY KEY,
+B NUMBER(10),
+C DATE,
+D VARCHAR2(10)
+);
+1. INSERT INTO Mytest VALUES(1, 12, SYSDATE, 002)
+2. INSERT INTO Mytest VALUES(2, 1111, TO_DATE('20240101', 'YYYYMMDD'), '003')
+3. INSERT INTO Mytest VALUES(3, 200, SYSDATE-10, '004')
+4. INSERT INTO Mytest VALUES(4, 32, 20240101, '004')
+답 : 4번
+해설) 
+1번 002는 자동으로 형변환이 되어 TO_CHAR(002)로 인해 D 칼럼에 '002'로 들어간다.
+2번은 권장형
+3번 각 문자항에 잘 들어감. SYSDATE-10은 10일 전 날짜를 의미
+4번 숫자형 값응ㄹ 바로 DATE에 넣어 데이터타입 불일치 에러 발생 TO_DATE(20240101)로 변경해야함
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
