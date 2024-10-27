@@ -122,7 +122,19 @@ FROM Mytest
 4. MIN(COL1), MAX(COL2), MAX(COL1)
 답 : 2번
 
-
+38. 아래의 결과값을 보고 SQL문의 빈칸에 들어갈 수 있는 내용을 고르시오.
+결과
+DEPNO[100, 100, 100, 200, 200, 200, 200, ___]
+JOB[증권사, 관리사, ___, 증권사, 데이터분석가, 관리자, ___, ___]
+SUM(SAL) [1300, 2400, 3700, 1900, 6000, 2975, 10875, 14575]
+SQL문
+SELECT DEPNO, JOB, SUM(SAL)
+FROM Mytest
+GROUP BY (  );
+1. DEPNO, JOB
+2. GROUPING SETS(DEPNO, JOB)
+3. ROLLUP(DEPNO, JOB)
+4. CUBE(DEPNO, JOB)
 
 
 
