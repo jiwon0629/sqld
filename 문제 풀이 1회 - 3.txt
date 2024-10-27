@@ -202,12 +202,17 @@ FROM MytestA A FULL OUTER JOIN MytestB
 ON (A.KEY1 = B.KEY2);
 SELECT *
 FROM MytestA A CROSS JOIN MytestB B;
-
+1. 2, 4, 3, 5, 12
+2. 2, 4, 5, 8, 12
+3. 2, 3, 4, 5, 12
+4. 2, 4, 3, 7, 12
+답 : 1번
+해설)
 INNER JOIN은 A * B이므로 A.KEY1 = B.KEY2는 B, C 2개이다.
-
-
-
-
+LEFT OUTER JOIN은 A가 기준으로 JOIN에 실패한 것도 포함이 되므로 B, C, D, E 4개이다.
+RIGHT OUTER JOIN은 B가 기준으로 JOIN에 실패한 것도 포함이 되므로 A, B, C 3개이다.
+FULL OUTER JOIN은 A, B가 기준으로 JOIN에 실패한 것도 포함이 되므로 A, B, C, D, E 5개이다.
+CROSS JOIN은 카티션 조인과 같다. A * B = 12개이다.
 
 
 
