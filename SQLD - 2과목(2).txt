@@ -71,6 +71,22 @@ GROUP BY FUNCTIOIN
  - 여러 GROUP BY결과를 동시에 출력(합집합)하는 기능
  - GROUP BY기능 : 그룹별 연산값만 출력되므로 전체 소계와 함께 출력될 수 없음
 
+그룹함수
+ - GROUP BY절의 연산 결과에 대해 그룹 별로 연산을 수행하는 함수
+ - 집계함수, ROLLUP, CUBE, GROUPING SETS 등
+
+ROLLUP
+ - GROUP BY절에 들어가는 컬럼을 대상으로 하위 그룹핑을 수행
+ - 그룹별 소계 & 총계
+  ex) GROUP BY ROLLUP(날짜, 이름) --- (날짜, 이름) -> (날짜) -> (전체) 순서로 하위 그룹핑 (앞의 것만 소계한다.)
+  만약에 A, B, C가 있으면 (A,B,C), A, (전체). 이런 식이다. 총계를 구함
+  GROUP BY ROLLUP(CYL, GEAR) -- (CYL, GEAR), (CYL), (전체 총계)
+
+CUBE
+ - 조합 가능한 모든 경우로 그룹핑을 수행
+  ex) GROUP BY CUBE(날짜, 이름) --- (날짜, 이름) -> (날짜) -> (이름) -> (전체) 순서로 하위 그룹핑
+  GROUP BY CUBE(CYL, GEAR) -- (CYL, GEAR), (CYL), (GEAR), (전체 총계)
+
 순위 관련 함수
 1) RANK(순위)
  RANK WITHIN GROUP
