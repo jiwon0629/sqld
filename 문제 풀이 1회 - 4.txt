@@ -32,7 +32,12 @@ ON(EMP.부서코드 = DEPT.부서코드)
 2. LEFT OUTER JOIN
 3. RIGHT OUTER JOIN
 4. CROSS JOIN
-
+답 : 3번
+해설)
+ORACLE OUTER JOIN에서 (+)가 왼쪽 테이블 옆에 위치해 있으므로
+우측 테이블에서는 조인을 수행하지않는 테이블의 행들은 그대로 유지되며,
+좌측 테이블에서는 조인을 수행하지 않는 테이블의 행들은 NULL값으로 추가되는
+RIGHT OUTER JOIN이 수행된다
 
 
 
