@@ -12,3 +12,8 @@
 MytestA 테이블 COL1 [1, 2, 3, 4], COL2 [A1, ___, B1, C1]
 MytestB 테이블 COL1 [1, 2, 3], COL2 [A1, ___, B1]
 SQL문 SELECT * FROM MytestA (    ) MytestB;
+1. INNER JOIN
+2. LEFT OUTER JOIN
+3. CROSS JOIN
+4. RIGHT OUTER JOIN
+답 : 3번
