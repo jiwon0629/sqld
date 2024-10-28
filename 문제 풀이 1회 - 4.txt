@@ -17,3 +17,4 @@ SQL문 SELECT * FROM MytestA (    ) MytestB;
 3. CROSS JOIN
 4. RIGHT OUTER JOIN
 답 : 3번
+해설) 1, 2, 3번 JOIN들은 ON이라는 조건이 있어야 한다.
