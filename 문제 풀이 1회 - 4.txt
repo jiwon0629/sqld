@@ -86,8 +86,33 @@ SELECT ROUND(10.51234, 1) FROM DUAL;
 2. 10.5
 3. 10.51
 4. 11
-답 : 4번
+답 : 2번
 해설) ROUND(숫자, 반올림 소수 자리)는 반올림하는 함수이다.
+10.51을 반올림하면 10.5이다
+
+48. 다음과 같은 결과값을 조회하기 위해서 SQL문의 (   )에 알맞은 것을 넣으시오.
+Mytest 테이블 ENAME[유비, 관우, 장비, 재갈량, 조운, 황충], SAL[1000, 1100, 1200, 1300, 1400, 1500]
+결과 ENAME[유비, 관우, 장비, 재갈량, 조운, 황충], SAL[1000, 1100, 1200, 1300, 1400, 1500], CNT[2, 2, 2, 2, 2, 1]
+SQL문 
+SELELCT ENAME, SAL, (   ) AS CNT FROM Mytest;
+1. MAX(SAL) OVER (ORDER BY SAL
+RANGE BETWEEN 50 PRECEDING AND
+100 FOLLOWING
+2. COUNT(*) OVER (ORDER BY SAL
+RANGE BETWEEN 50 PRECEDING AND
+100 FOLLOWING)
+3. COUNT(*) OVER (ORDER BY SAL
+RANGE BETWEEN 100 PRECEDING AND
+50 FOLLOWING)
+4. COUNT(*) OVER (ORDER BY CNT
+RANGE BETWEEN 50 PRECEDING AND
+100 FOLLOWING)
+답 : 2번
+해설) 위의 테이블에서 결과값과 같이 반환되도록 'SAL' 속성을 기준으로
+정렬을 수행하고 각각의 행에서의 SAL 속성값을 기준으로 -50에서 +100 
+범위 사이에 포함되는 SAL값을 가지는 모든 행의 수를 COUNT하여 CNT
+속성값으로 조회한다(RANGE는 현재 행의 데이터 값을 기준으로 앞뒤
+데이터 값의 범위를 표시하는 것)
 
 
 
