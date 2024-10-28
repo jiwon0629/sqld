@@ -39,11 +39,36 @@ ORACLE OUTER JOIN에서 (+)가 왼쪽 테이블 옆에 위치해 있으므로
 좌측 테이블에서는 조인을 수행하지 않는 테이블의 행들은 NULL값으로 추가되는
 RIGHT OUTER JOIN이 수행된다
 
+44. 다음은 ORACLE 데이터베이스에서 사용하는 OUTER JOIN의 예제이다. 빈칸을 채워 ORACLE OUTER JOIN을 표준 ANSI SQL로 변경하시오.
+[ORACLE OUTER JOIN]
+SELECT *
+FROM EMP.DEPT
+WHERE EMP.부서코드 = DEPT.부서코드(+)
+AND DEPT.부서명(+) = '보안팀' AND 급여 > 4000
+[ANSI JOIN]
+SELECT *
+FROM EMP (   ) DEPT
+ON (EMP.부서코드 = DEPT.부서코드
+AND DEPT.부서명(+) = '보안팀') 
+WHERE 1=1 AND 급여 > 4000;
+1. FULL OUTER JOIN
+2. LEFT OUTER JOIN
+3. RIGHT OUTER JOIN
+4. CROSS JOIN
+답 : 2번
 
-
-
-
-
+45. 다음 보기에서 설명하고 있는 데이터베이스 키의 종류는 무엇인가?
+데이터베이스 키의 종류 중에서 유일성과 최소성을 만족한다.
+1. 인조키
+2. 수퍼키
+3. 후보키
+4. 외래키
+답 : 3번
+해설) 
+기본키 : 후보키 중에서 엔터티를 대표할 수 있는 키
+후보키 : 유일성과 최소성을 만족하는 키
+수퍼키 : 
+외래키 : 
 
 
 
