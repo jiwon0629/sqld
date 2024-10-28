@@ -1,0 +1,8 @@
+41. EMP 테이블의 급여합계에 대해서 결합 가능한 모든 조건의 합계를 계산하는 것은?
+1. GROUP  BY DEPTNO, JOB
+2. GROUPING SETS(DEPTNO, JOB)
+3. ROLLUP(DEPTNO, JOB)
+4. CUBE(DEPTNO, JOB)
+답 : 4번
+해설) CUBE는 CUBE 함수에 제시한 컬럼에 대해서 결합 가능한 모든 집계를 계산한다.
+즉, 다차원 집계를 제공하여 다양하게 데이터를 분석할 수 있게 한다.
