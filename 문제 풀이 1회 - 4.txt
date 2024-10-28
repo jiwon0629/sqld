@@ -129,9 +129,31 @@ RANGE BETWEEN 50 PRECEDING AND
 외부 식별자 : 다른 엔터티의 관계로 인하여 만들어지는 식별자
 예를 들어 계좌 엔터티에 회원 ID이다.
 
-
-
-
+50. 다음에 주어진 두 개의 테이블에 대해서 "SQL1"의 실행 결과와 동일한 "SQL2"문을 완성하시오.
+MytestA 테이블 COL1[1, 2, 3, 4], COL2[200, 310, 400, 500]
+MytestB 테이블 COL1[1, 2, 3, 4], COL2[200, 350, 400, 550], COL3[1000, 2000, 3000, 4000]
+SQL1문
+SELECT *
+FROM MytestA a
+WHERE(a.col1, a.col2)
+IN (SELECT b.col1, b.col2 FROM MytestB b
+WHERE b.col3 > 1400);
+SQL2문
+SELECT *
+FROM MytestA a
+WHERE EXISTS (   );
+1. SELECT 1 FROM MytestB b
+WHERE a.col1=b.col1 AND
+a.col2=b.col2 AND b.col3 > 1400
+2. SELECT 1 FROM MytestB b
+WHERE a.col1=b.col1 AND
+a.col2=b.col2 AND b.col3 < 1400
+3. SELECT 1 FROM MytestB b
+WHERE a.col1=b.col1 AND
+a.col2=b.col2 AND b.col1 > 1400
+4. SELECT 1 FROM MytestB b
+WHERE a.col1=b.col1 AND
+a.col2=b.col2 AND b.col1 < 1400
 
 
 
