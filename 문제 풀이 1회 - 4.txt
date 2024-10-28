@@ -154,7 +154,13 @@ a.col2=b.col2 AND b.col1 > 1400
 4. SELECT 1 FROM MytestB b
 WHERE a.col1=b.col1 AND
 a.col2=b.col2 AND b.col1 < 1400
-
+답 : 1번
+해설)
+EXISTS 구문의 뒤의 조건에 일치하는 경우 해당 a 테이블의 행을 출력한다.
+MytestA와 MytestB에서 같은 COL1, COL2 값을 가지는 행으로 MytestB에서
+1, 3번째 행이 선택되고 그 중에서 COL3 속성값이 1400보다 큰 값을 가지는
+행을 찾는다. EXISTS 뒤에서 SELECT 1 ...이 부분은 별 의미가 없이 문법을
+지키기 위해 사용한 것이다. EXISTS(SELECT * ...또는 SELECT X'등도 사용 가능
 
 
 
