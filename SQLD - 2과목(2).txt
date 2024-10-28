@@ -87,6 +87,16 @@ CUBE
   ex) GROUP BY CUBE(날짜, 이름) --- (날짜, 이름) -> (날짜) -> (이름) -> (전체) 순서로 하위 그룹핑
   GROUP BY CUBE(CYL, GEAR) -- (CYL, GEAR), (CYL), (GEAR), (전체 총계)
 
+GROUPING SETS
+ - 그룹핑 대상을 지정하는 함수
+ - GROUPING SETS의 인자에 ROLLUP이나 CUBE 함수를 넣을 수 있으며, 
+  이런 경우에는 ROLLUP이나 CUBE의 그룹핑 결과인 소계, 총계들이 각각 별개의 
+  인자로 지정된 것과 같은 결과를 반환
+  GROUP BY GROUPING SETS(CYL, GEAR) -- (CYL), (GEAR)
+
+ROLLUP (CYL, GEAR) = GROUPING SETS((CYL, GEAR), (CYL), ())
+CUBE(CYL, GEAR) = GROUPING SETS((CYL, GEAR), (CYL), (GEAR), ())
+
 순위 관련 함수
 1) RANK(순위)
  RANK WITHIN GROUP
