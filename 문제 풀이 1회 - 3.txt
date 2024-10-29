@@ -95,7 +95,7 @@ D VARCHAR2(10)
 4번 숫자형 값을 바로 DATE에 넣어 데이터타입 불일치 에러 발생 TO_DATE(20240101)로 변경해야함
 
 36. 다음의 SQL문이 반환하는 결과값은?
-Mytest 테이블 COL1 [1, 2, 3], COL2 [NULL, 10, 10], COL3 [1, 14, 12]
+Mytest 테이블 COL1 [1, 2, 2], COL2 [NULL, 10, 10], COL3 [1, 14, 12]
 SELECT *
 FROM Mytest 
 ORDER BY COL1 DESC, COL2 DESC, COL3 DESC;
