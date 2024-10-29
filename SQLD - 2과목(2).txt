@@ -97,6 +97,11 @@ GROUPING SETS
 ROLLUP (CYL, GEAR) = GROUPING SETS((CYL, GEAR), (CYL), ())
 CUBE(CYL, GEAR) = GROUPING SETS((CYL, GEAR), (CYL), (GEAR), ())
 
+GOUPING
+ - ROLLUP, CUBE, GROUPING SETS과 함께 사용하여 소계에 해당한는 결과 행과 그렇지 않은 행을 구분
+ - 소계에 해당하는 결과 행의 경우에는 1을 반환하고 그렇지 않은 경우에는 0을 반환
+ - GROUPING 함수와 CASE문을 사용하여 소계나 총계를 표시하는 행에 대해서 그 의미에 맞는 텍스트를 값으로 지정 가능
+
 순위 관련 함수
 1) RANK(순위)
  RANK WITHIN GROUP
