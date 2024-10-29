@@ -1,0 +1,12 @@
+1. 다음은 데이터베이스 파티션 기법에 대한 설명이다. 보기에서 설명하고 있는 파티션 기법은 무엇인가?
+ - 파티셔닝 할 항목을 관리자가 직접 지정하는 방법으로 제품에 대해서 파티션을 생성하였다.
+ - 데이터 보관 주기에 따라서 쉽게 데이터를 삭제할 수 없다.
+1. RANGE PARTITION
+2. HASH PARTITION
+3. LIST PARTITION
+4. HYBRID PARTITION
+답 : 3번
+LIST PARTITON
+RANGE PARTITON은 데이터 값의 범위를 기준으로 파티션을 수행하고 LIST PARTITON은 특정 값을 
+지정해서 파티션을 수행한다. 또한 HASH PARTITION은 해시 함수를 적용하여 파티션을 수행하는 것이다.
+COMPOSITE PARTITION은 범위와 해시를 복합적으로 사용해서 파티션을 수행한다.
