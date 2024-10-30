@@ -115,7 +115,15 @@ FROM MytestA
 UNION ALL
 SELECT COL1, COL2
 FROM MytestB
-
+답 : 5개
+해설)
+MytestA
+1 2
+1 3
+MytestB
+1 2
+1 4
+1 5
 
 
 
