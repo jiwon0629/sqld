@@ -105,7 +105,16 @@ FROM SCOTT.EMP A INNER JOIN
 SCOTT.DEPT B
 ON A.DEPTNO = B.DEPTNO
 WHERE 1=1 AND B.DNAME = 'KIM';
+답 : 4번
 
+30. 두 개의 테이블에 대해서 UNION ALL을 실행했을 때 조회되는 행 수는?
+MytestA 테이블 COL1 [1, 1, 1], COL2 [2, 2, 3]
+MytestB 테이블 COL1 [1, 1, 1], COL2 [2, 4, 5]
+SELECT DISTINCT COL1, COL2
+FROM MytestA
+UNION ALL
+SELECT COL1, COL2
+FROM MytestB
 
 
 
