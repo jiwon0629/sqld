@@ -44,11 +44,25 @@ TRUNC는 소수점을 버리기 때문에 35
 2. 명시적 트랜잭션의 시작과 끝은 모두 SQL을 실행하는 사용자가 지정한다.
 3. 암시적(묵시적) 트랜잭션 처리는 트랜잭션이 자동으로 시작되며 자동으로 완료 혹은 취소되는 것이다.
 4. ORACLE에서 INSERT를 실행하면 자동적으로 COMMIT까지 완료된다.
-답 : 1번
+답 : 4번
 해설) 오라클에서 기본적으로 AUTO COMMIT은 설정되지 않는다. SQL SERVER는 기본 설정이 AUTO COMMIT이다.
 
+16. 범위에 벗어나는 문제여서 제외.
 
-
+17. PL/SQL에서 FETCH 이후에 수행해야 하는 것은?
+1. CURSOR DEFINE
+2. CURSOR EXPTION
+3. CURSOR CLOSE
+4. EXIT
+답 : 
+해설) PL/SQL의 사용 순서는 CURSOR 선언, CURSOR OPEN, FETCH, CURSOR CLOSE이다.
+PL/SQL에서 선언구는 다음과 같다.
+커서의 선언구
+DECLARE CURSOR <커서명> IS SELECT <컬럼명> FROM <테이블명>;
+커서가 선언되면 OPEN 문을 사용해서 해당 커서를 열어야 사용이 가능하다.
+커서의 열기
+OPEN <커서명>;
+커서가 열려지면 FETCH 문을 사용해서 데이터를 읽어 올 수 있다.
 
 
 
