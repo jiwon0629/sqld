@@ -54,7 +54,7 @@ TRUNC는 소수점을 버리기 때문에 35
 2. CURSOR EXPTION
 3. CURSOR CLOSE
 4. EXIT
-답 : 
+답 : 3번
 해설) PL/SQL의 사용 순서는 CURSOR 선언, CURSOR OPEN, FETCH, CURSOR CLOSE이다.
 PL/SQL에서 선언구는 다음과 같다.
 커서의 선언구
@@ -68,6 +68,28 @@ FETCH <커서명> INTO 변수1, 변수2...;
 마지막으로 인출이 종료되면 사용된 커서는 반드시 닫아야 한다.
 커서의 닫기
 CLOSE <커서명> ;
+
+18. SQL SERVER에 구축된 TEAMSCORE 테이블에서 WINCNT가 가장 높으 4위까지 조회한다.
+단, WINCNT에 동일한 순위 팀이 있으면 같이 조회하는 SQL문으로 올바른 것은?
+TEAMNAME[ A, B, C, D, E, F, G], WINCNT[124, 20, 12, 102, 110, 100, 71], FAILCNT[90, 11, 21, 100, 111, 200, 30]
+1. SELECT TOP(4) TEAMNAME WINCNT
+FROM TEAMSCORE ORDERBY WINCNT ASC;
+2. SELECT TOP(4) TEAMNAEM, WINCNT
+FROM TEAMSCORE;
+3. SELECT TEAMNAME WINCNT
+FROM TEAMSCORE
+WHERE ROWNUM <= 4
+ORDER BY WINCNT DESC;
+4. SELECT TOP(4) WITH TIES TEAMNAME, WINCNT
+FROM TEAMSCORE ORDER BY WINCNT DESC.
+답 : 4번
+해설) 3번의 ROWNUM은 ORACLE데이터베이스에서 사욛하는 것이고
+SQL SERVER는 TOP구를 사용한다. TOP구에 WITH TIES를 같이 
+사용하면 동일한 데이터가 있을 때 함께 조회된다.
+
+19. 다음 중 LIKE문에서 세 번째 문자가 'K'인 문자열을 
+조회하는 것으로 가장 올바른 것은?
+1. 
 
 
 
