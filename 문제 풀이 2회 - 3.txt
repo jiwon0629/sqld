@@ -1,0 +1,8 @@
+21. 다음 중 세번째 문자가 'N'인 문자열을 검색하는 조건으로 적절한 것은?
+1. SELECT * FROM 테이블명 WHERE like LIKE 'N%'
+2. SELECT * FROM 테이블명 WHERE like '%N%'
+3. SELECT * FROM 테이블명 WHERE like '[__N%]'
+4. SELECT * FROM 테이블명 WHERE like '__N%'
+답 : 4번
+
+22. 
