@@ -139,11 +139,11 @@ SUM(SAL)[1000, 2000, 3000, 6000, 1000, 2000, 3000, 6000]
 1. SELECT FLOOR(35.8) FROM DUAL -> 36
 2. SELECT CEIL(35.8) FROM DUAL -> 36
 3. SELECT ROUND(36.8, 0) FROM DUAL -> 36
-4. SELECT TRUN(35.8) FROM DUAL -> 36
+4. SELECT TRUNC(35.8) FROM DUAL -> 36
 답 : 2번
-해설) CEIL은 35.8보다 크거나 같은 최소의 정수를 되돌려 주기 때문에 36
-
-
+해설) CEIL은 올림함수 35.8보다 크거나 같은 최소의 정수를 되돌려 주기 때문에 36
+FLOOR은 내림함수이기 때문에 35
+TRUNC는 소수점을 버리기 때문에 35
 
 
 
