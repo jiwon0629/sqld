@@ -12,3 +12,24 @@ CONNECT BY PRIOR EMPNO = MGR;
 CONNECT_BY_ISLEAF : 전개 과정에서 해당 데이터가 리프 데이터면1, 아니면 0을 반환
 CONNECT_BY_ISCYCLE : 전개 과정에서 자식을 갖는데, 해당 데이터가 조상으로 존재하면 1, 아니면 0을 반환
 SYS_CONNECT_BY_PATH : 하위 레벨의 컬럼까지 모두 표시
+
+32. 다음 SQL문을 실행한 결과로 올바른 것은?
+MytestA N1[1, 2, 3, 4], V1[A, _, B, C]
+MytestB N1[1, 2, 3], V1[A, _, B]
+SQL문
+SELECT SUM(A.N1)
+FROM MytestA A, MytestB B
+WHERE A.V1 <> B.V1
+답 : 
+해설) <>은 같지 않다는 의미
+
+
+
+
+
+
+
+
+
+
+
