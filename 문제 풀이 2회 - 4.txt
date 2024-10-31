@@ -20,7 +20,7 @@ SQL문
 SELECT SUM(A.N1)
 FROM MytestA A, MytestB B
 WHERE A.V1 <> B.V1
-답 : 
+답 : 12개
 해설) <>은 같지 않다는 의미
 
 
