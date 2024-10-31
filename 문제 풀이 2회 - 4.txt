@@ -22,6 +22,7 @@ FROM MytestA A, MytestB B
 WHERE A.V1 <> B.V1
 답 : 12개
 해설) <>은 같지 않다는 의미
+CROSS JOIN 결과에서 NULL값을 제외하고 조건을 체크하면
 
 
 
