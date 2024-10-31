@@ -1,0 +1,11 @@
+31. 다음의 계층형 질의에서 리프(LEAF) 노드 여부를 출력하려고 한다. (  )에 올바른 것은?
+SELECT LEVEL, LPAD('', 4 * (LEVEL-1)||EMPNO.MGR, ( ) AS ISLEAF
+FROM Mytest 
+START WITH MGR IS NULL
+CONNECT BY PRIOR EMPNO = MGR;
+1. CONNECT_BY_ISLEAF
+2. CONNECT_BY_ISCYCLE
+3. SYS_CONNECT_BY_PATH
+4. CONNECT_BY_LEAF
+답 : 
+해설) PRIOR 뒤에 붙은게 기준이 된다.
