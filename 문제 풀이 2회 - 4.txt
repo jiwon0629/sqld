@@ -23,7 +23,7 @@ WHERE A.V1 <> B.V1
 답 : 12개
 해설) <>은 같지 않다는 의미
 CROSS JOIN 결과에서 NULL값을 제외하고 조건을 체크하면
-
+1 A 3 B, 3 B 1 A, 4 C 1 A, 4 C 3 B
 
 
 
