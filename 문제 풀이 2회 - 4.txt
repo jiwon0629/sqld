@@ -7,5 +7,8 @@ CONNECT BY PRIOR EMPNO = MGR;
 2. CONNECT_BY_ISCYCLE
 3. SYS_CONNECT_BY_PATH
 4. CONNECT_BY_LEAF
-답 : 
+답 : 1번
 해설) PRIOR 뒤에 붙은게 기준이 된다.
+CONNECT_BY_ISLEAF : 전개 과정에서 해당 데이터가 리프 데이터면1, 아니면 0을 반환
+CONNECT_BY_ISCYCLE : 전개 과정에서 자식을 갖는데, 해당 데이터가 조상으로 존재하면 1, 아니면 0을 반환
+SYS_CONNECT_BY_PATH : 하위 레벨의 컬럼까지 모두 표시
