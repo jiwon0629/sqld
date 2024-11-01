@@ -74,3 +74,36 @@ DCL(Data Control Language)
 GRANT, REVOKE
 TCL(Transaction Control Language)
 COMMIT, ROLLBACK
+
+37. 다음 중 아래의 데이터 모델과 같은 테이블 및 PK 제약조건을 생성하는
+DDL문장으로 올바른 것은? (단, DBMS는 Oracle을 기준으로 한다.
+테이블명 : T_PRODUCT(기본키 : PRODUCT_ID)
+SQL문
+PRODUCT_ID VARCHAR2(10) NOT NULL
+PRODUCT_NAME VARCHAR2(100) NOT NULL
+REGISTER_DATE DATE NOT NULL
+REGISTER_NO NUMBER(10) NULL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
