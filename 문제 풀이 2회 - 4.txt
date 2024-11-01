@@ -34,9 +34,25 @@ IN, ANY, EXISTS, ALL과 같은 함수를 사용해야 한다.
 답 : 3번
 해설) 서브쿼리 중에서 INLINE VIEW의 컬럼은 메인 쿼리에서도 사용 가능하다.
 
+34. 벗어난 범위
 
-
-
-
+35. 다음 중 SQL문을 가장 잘 설명하고 있는 것은?
+MytestA 테이블 EMPLOYEE_ID[A1, A2, A3, A4, A5], 
+MANAGER_ID[B1, B2, B3, B4, B5], 
+SALARY[400, 8000, 9000, 4000, 5000]
+MytestB 테이블 EMPLOYEE_ID[B1, B2, B3, B4, B5], 
+MANAGER_ID[C1, C2, C3, C4, C5], 
+SALARY[2000, 7000, 10000, 3000, 6000]
+SQL문
+SELECT A.*
+FROM MytestA, MytestB
+WHERE A.MANAGER_ID = B.EMPLOYEE_ID
+AND B.SALARY >= ANY A.SALARY;
+1. 어떤 부하 직원보다도 연봉이 높은 상사
+2. 어떤 부하 직원보다도 연봉이 낮은 상사
+3. 어떤 상사보다도 연봉이 높은 부하 직원
+4. 어떤 상사보다도 연봉이 낮은 부하 직원
+답 : 3번
+해설) ANY는 다중행 연산자(뒤의 조건중 하나라도 일치하면 TRUE)
 
 
