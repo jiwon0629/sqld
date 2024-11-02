@@ -157,7 +157,24 @@ AS SUM2 FROM Mytest;
 4. 4, 8
 답 : 3번
 
-
-
+50. 다음 주어진 SQL문의 빈칸에 그룹 함수를 쓰시오.
+Mytest 테이블 COL1[A, A, A, B, B, B, C]
+COL2[가, 가, 다, 가, 나, 나, 다]
+COL3[100, 500, 1000, 2000, 3000, 10000, 5000]
+SQL문
+SELECT COL1, COL2, COL3 SUM(COL3)
+FROM Mytest 
+GROUP BY (   );
+결과
+COL1[A, A, A, B, B, B, C, C]
+COL2[가, 다, __, 가, 나, __, 다, __]
+COL3[600, 1000, 1600, 2000, 13000, 15000, 5000, 5000]
+1. GROUPING SETS(COL1, (COL1, COL2))
+2. GROUPING SETS(COL1, (COL2, COL3))
+3. GROUPING SETS(COL1, COL2, COL3)
+4. GROUPING SETS(COL1, (COL2, COL1))
+답 : 1번
+해설) 일단 GOUP BY COL1, COL2를 한 걸 알 수 있다
+그리고 GROUP BY COL1을 한 걸 알 수 있다.
 
 
