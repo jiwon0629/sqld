@@ -1,0 +1,46 @@
+41. 다음의 주어진 테이블에서 아래의 SQL문을 수행하였을 때의 결과가
+RESULT와 같을 때 SQL문의 ( ㄱ )에 들어갈 것은?
+Mytest 테이블 COL1[AAA, BBB, CCC, DDD, EEE, FFF, GGG, HHH, III, JJJ]
+RESULT 테이블 VAL[1,2,3,4], CNT[3,3,2,2]
+SQL문
+SELECT VAL, COUNT(*) AS CNT
+FROM( SELELCT ( ㄱ )(4) OVER (ORDER BY
+COL1) AS VAL FROM Mytest)
+WHERE 1 = 1 GROUP BY VAL ORDER BY 1;
+1. NTILE
+2. LEAD
+3. RANK
+4. LAG
+답 : 1번
+해설) NTILE함수는 EXPR에 명시된 값만큼 파티션을 
+균등하게 분할하는 함수로 EXPR에 명시된 숫자가 4이고
+ORDER BY가 1이니 오름차순 정렬로 총 4개의 VAL
+속성값으로 파티션이 분할되며 각 파티션별로 행의 수가
+균등하게 분할되어 3, 3, 2, 2의 행의 수로 각각 분할된다.
+NTILE(5)면 균일하게 데이터를 2개씩 5개로 나눠지게 한다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
