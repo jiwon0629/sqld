@@ -142,10 +142,20 @@ SELECT * FROM DEPT CROSS JOIN DEPT;
 4. 16
 답 : 4번
 
-49.
-
-
-
+49. 다음의 SQL문을 실행한 결과를 쓰시오.
+Mytest 테이블 COL1[A, A, A, B, B, B, C]
+COL2[가, 가, 다, 가, 나, 나, 다]
+COL3[100, 500, 1000, 2000, 3000, 10000, 5000]
+SQL문
+SELECT SUM(CASE WHEN COL1 ='A'
+THEN 1 END) AS SUM1,
+SUM(CASE WHEN COL3 < 20000 THEN 1 END)
+AS SUM2 FROM Mytest;
+1. 1, 5
+2. 2, 6
+3. 3, 7
+4. 4, 8
+답 : 3번
 
 
 
