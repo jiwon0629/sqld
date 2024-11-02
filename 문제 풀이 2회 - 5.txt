@@ -114,8 +114,23 @@ SELELCT COALESCE(nullif(1,1), 200, 300) as data from dual;
 COALESCE는(A,B,C)는 NULL이 아닌 데이터 출력이다.
 A가 NULL이면 B출력, B가 NULL이면 C출력
 
-
-
+47. 날짜값을 2020, 02와 같이 조회되도록 SQL문을 완성하시오.
+Mytest 테이블 COL1[2020-2-1]
+SQL문
+SELECT EXTRACT
+(YEAR FROM SYSDATE),
+LPAD(EXTRACT(month from sysdate), ㄱ, ㄴ)
+FROM Mytest;
+1. 1, '0'
+2. 1, '2'
+3. 2, '2'
+4. 2, '0'
+답 : 4번
+해설) EXTRACT는 날짜를 받아서 YEAR나 DAY나 MONTH를 받아서 숫자형으로 반환해준다.
+EXTRACT(YEAR FROM SYSDATE)는 2020이 나온다.
+LPAD는 L : LEFT, PAD : PADDING이란 의미이다. 즉, 3이라는 숫자가 있을 때
+003으로 하고 싶을 때 사용한다.
+LPAD(사용할 숫자, 자릿수, 대체할 무언가)
 
 
 
