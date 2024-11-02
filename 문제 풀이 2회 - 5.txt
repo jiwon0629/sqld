@@ -104,12 +104,15 @@ NTILE2[1,1,1,2,2,3,3]
 
 46. 다음 SLQ문의 실행 결과는?
 SQL문
-SELELCT SOALESCE(nullif(1,1), 200, 300) as data from dual;
+SELELCT COALESCE(nullif(1,1), 200, 300) as data from dual;
 1. 100
 2. 200
 3. 300
 4. 400
-
+답 : 2번
+해설) nullif(a,b)는 a=b면 null을 반환하고 아니면 a를 반환한다.
+COALESCE는(A,B,C)는 NULL이 아닌 데이터 출력이다.
+A가 NULL이면 B출력, B가 NULL이면 C출력
 
 
 
