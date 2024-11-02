@@ -130,20 +130,58 @@ CREATE TABLE C
 B INTEGER REFERENCES B(B) ON DELETE SET NULL);
 1. (1, NULL)과 (2, 2)
 2. (1, NULL)과 (2, NULL)
-
+3. (2, 2)
+4. (1, 1)
 답 : 2번
 해설) 참조(ON DELETE CASCADE) = 삭제시 연쇄 삭제하겠다.
 A테이블을 삭제하면 A(C)를 참조하는 B테입르도 삭제되므로
 B(B)를 참조하는 C(B)는 NULL이 된다.
 
+39. 다음은 테이블 생성 시 사용하는 제약조건(Constraints)에 대한 설명이다.
+가장 올바르지 않은 것은?
+1. UNIQUE : 컬럼에 중복된 값이 없을 때도 NULL 값은 입력되지 않는다.
+2. PRIMARY KEY : 기본키로 테이블당 한 개만 생성이 가능하고 자동으로 인덱스가 생성된다.
+3. FOREIGN KEY : 다른 테이블의 기본 키를 참조한다.
+4. NOT NULL : 컬럼에 NULL 값을 입력할 수 없도록 한다. 기본키의 경우 
+별도로 지정하지 않아도 된다.
+답 : 1번
+해설) UNIQUE 제약조건은 컬럼에 중복된 값을 허용하진 않지만, NULL값은 포함한다.
 
-
-
-
-
-
-
-
+40. 다음 중 SQL에서 실행 결과가 같은 것은?
+(출력되는 행의 순서는 고려하지 않음)
+MytestA 테이블 ID[1,2,3,4,5,6], NAME[A,B,C,D,E,F]
+MytestB 테이블 ID[1,3,5,6,7,8], NAME[G,H,I,FJ,K,L]
+(1) 
+SELECT A.ID, B.ID
+FROM MytestA A FULL OUTER JOIN MytestB B
+ON A.ID = B.ID
+(2)
+SELECT A.ID, B.ID
+FROM MytestA A LEFT OUTER JOIN MytestB B
+ON A.ID = B.ID
+UNION
+SELECT A.ID, B.ID
+FROM MytestA A RIGHT OUTER JOIN MytestB B
+ON A.ID = B.ID
+(3)
+SELECT A.ID, B.ID
+FROM MytestA A RIGHT OUTER JOIN MytestB B
+WHERE A.ID = B.ID
+UNION ALL
+SELECT A.ID, NULL
+FROM MytestA A WHERE NOT EXISTS(SELECT 1 FROM MytestB B
+WHERE A.ID = B.ID)
+UNION ALL
+SELECT NULL, B.ID
+FROM MytestB B WHERE NOT EXISTS(SELECT 1 FROM MytestA A
+WHERE B.ID = A.ID)
+해설)
+1번은 (1 A, 1 G), (2 B, NULL NULL), (3 C, 3 H), (4 D, NULL NULL)
+(5 E, 5 I), (6 F, 6 J), (NULL NULL, 7 K), (NULL NULL, 8 L)
+2번은 (1 A, 1 G), (2 B, NULL NULL), (3 C, 3 H), (4 D, NULL NULL)
+(5 E, 5 I), (6 F, 6 J)과 (1 A, 1 G), (3 C, 3 H), (5 E, 5 I), 
+(6 F, 6 J), (NULL NULL, 7 K), (NULL NULL, 8 L)이 합쳐져서 FULL OUTER JOIN과 
+연산 결과가 같다.
 
 
 
