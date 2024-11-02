@@ -78,10 +78,37 @@ LEAD는 내 기준 행의 다음 컬럼을 확인하는 것이다.
 파티션이 넘어가면 모두 NULL로 처리되는데 그 경우
 숫자를 지정하면 NULL대신 숫자로 입력된다.
 
+45. 다음 SQL문을 실행하여 나오는 결과의 빈칸 ㄱ, ㄴ을 작성하시오.
+Mytest 테이블 COL1[A, A, A, B, B, B, C]
+COL2[가, 가, 다, 가, 나, 나, 다]
+COL3[100, 500, 1000, 2000, 3000, 10000, 5000]
+SQL문
+SELECT NTILE2, COUNT(*) AS CNT
+FROM( SELECT COL1, COL2, COL3, NTILE(3)
+OVER(ORDER BY COL3) AS NTILE2 FROM Mytest)
+GROUP BY NTILE2;
+결과
+NTILE2[ㄱ, 2, 3]
+CNT[ㄴ, 2, 2]
+1. 3, 1
+2. 2, 3
+3. 1, 3
+4. 3, 2
+답 : 3번
+해설) ORDER BY(COL3)를 하면 
+COL1[A, A, A, B, B, C, B]
+COL2[가, 가, 다, 가, 나, 다, 나]
+COL3[100, 500, 1000, 2000, 3000, 50000, 10000]
+으로 정렬된다.
+NTILE2[1,1,1,2,2,3,3]
 
-
-
-
+46. 다음 SLQ문의 실행 결과는?
+SQL문
+SELELCT SOALESCE(nullif(1,1), 200, 300) as data from dual;
+1. 100
+2. 200
+3. 300
+4. 400
 
 
 
