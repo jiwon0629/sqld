@@ -70,7 +70,14 @@ FROM Mytest;
 SUM(C1+C2+C3+C4)는 50, NULL, NULL, NULL이기 때문에 50
 SUM(C1) + SUM(C2) + SUM(C3) + SUM(C4)은 260
 
-
+18. 다음 중 NULL값을 반환하는 쿼리는 어떤 것인가?
+1. SELECT COALESCE(NULL, '20') FROM DUAL
+2. SELECT NULLIF('B','B') FROM DUAL
+3. SELECT NVL(NULL, 0) + 10 FROM DUAL
+4. SELECT NVL(NULL, 'B') FROM DUAL
+답 : 2번
+해설) COALESCE(A, B) 괄호 안에 있는 것이 NULL이 아닌게 하나라도 있으면 NULL이 아닌 것이 출력한다.
+NULLIF(exp1, exp2)은 exp1과 exp2가 같으면 NULL, 같지 않으면 exp1을 반환한다.
 
 
 
