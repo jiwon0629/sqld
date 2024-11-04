@@ -45,6 +45,30 @@ CONNECT BY PRIOR 자식 = 부모는 순방향
 2. SELECT * FROM 야구선수 ORDER BY 선수명 DESC, 팀명 DESC, 연봉 ASC
 3. SELECT * FROM 야구선수 ORDER BY 선수명 ASC, 팀명 ASC, 연봉 ASC
 4. SELECT * FROM 야구선수 ORDER BY 선수명, 팀명, DESC, 연봉 ASC 
+답 : 1번
+해설) 1번을 보면 아무것도 없으면 ASC이고 3은 3번째 위치의 연봉을 의미한다.
+
+16. 범위 벗어남
+
+17. 다음의 Mytest 테이블에서 아래의 SQL문을 수행한 결과로 알맞은 것은?
+Mytest 테이블
+C1[10,20,30,NULL]
+C2[20,20,NULL,40]
+C3[10,NULL,30,40]
+C4[10,20,NULL,40]
+SQL문
+SELECT SUM(C1+C2+C3+C4) FROM Mytest
+UNION ALL
+SELECT SUM(C1) + SUM(C2) + SUM(C3) + SUM(C4)
+FROM Mytest;
+1. 50, NULL
+2. NULL, 260
+3. 50, 260
+4. NULL, NULL
+답 : 3번
+해설) 첫번째 열(가로)로 분석
+SUM(C1+C2+C3+C4)는 50, NULL, NULL, NULL이기 때문에 50
+SUM(C1) + SUM(C2) + SUM(C3) + SUM(C4)은 260
 
 
 
