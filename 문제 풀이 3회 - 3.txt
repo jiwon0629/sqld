@@ -100,8 +100,26 @@ SELECT MAX(N1) FROM MYTEST;
 2. 300
 3. 100
 4. 200
-답 : 4번
+답 : 2번
 
+30. AUTO COMMIT이 FALSE로 설정된 환경에서 다음의 SQL문을
+실행했을 때의 결과로 올바르지 않은 것은?
+COL1[10,20]
+COL2[10,20]
+CREATE TABLE MYTEST_TEMP(COL1 NUMBER(10));
+UPDATE MYTEST SET COL1=130 WHERE COL2=10;
+ROLLBACK;
+1. SQL SERVER에서 ROLLBACK을 하는 경우 UPDATE구는 취소된다.
+2. ORCLE에서 ROLLBACK을 수행하면 UPDATE구는 취소된다.
+3. ORACLE에서 ROLLBACK을 실행하면 테이블은 생성되지 않는다.
+4. AUTO COMMIT이 FALSE이므로 UPDATE구는 자동 COMMIT되지 않는다.
+답 : 3번
+해설) 기본상태 
+ORACLE : AUTO COMMIT => FALSE(DML : 직접 커밋, DDL : 자동 커밋)
+SQL SERVER : AUTO COMMIT => TRUE(DML : 자동 커밋, DDL : 자동 커밋)
+설정 변경시 (AUTO COMMIT = FALSE)
+ORACLE : AUTO COMMIT => FALSE(DML : 직접 커밋, DDL : 자동 커밋)
+SQL SERVER : AUTO COMMIT => FALSE(DML : 직접 커밋, DDL : 직접 커밋)
 
 
 
