@@ -45,8 +45,17 @@ FROM MyB);
 4. 11
 답 : 4번
 
-26. 다음의 
-
+26. 다음의 SQL문을 실행했을 때 결과는?
+MyA테이블 COL1[10,10,20,20,25,30,50,60]
+MyB테이블 COL1[10,20,30,40,50]
+SQL문
+SELECT * FROM MyA A
+LEFT OUTER JOIN MyB B
+ON A.COL1 = B.COL1;
+답 : 1번
+해설)
+A.COL1[10,10,20,20,25,30,50,60]
+B.COL1[10,20,30,40,50]
 
 
 
