@@ -59,11 +59,18 @@ SQL3) SELECT GRADE, COUNT(*) FROM EMP GROUP BY GRADE;
 답 : 2번
 해설) UPPER는 문자열을 대문자로 변환하는 연산자
 
-47.
-1.
-2.
-3.
-4. 
+47. 다음의 A에 올바른 것을 작성하시오.
+SELECT ENAME, SAL, ( A ) OVER ( ORDER BY ENAME ) AS SAL1 FROM EMP; 
+ENAME[TEST10, TEST11, TEST12, TEST13, TEST14]
+SAL[1500,1100,950,3000, 1300]
+SAL1[1100,950,3000,1300, 1600]
+1. LAG(SAL)
+2. LEAD(SAL)
+3. RANK()
+4. LAG(SAL, 2)
+답 : 2번
+해설) LEAD(SAL) 
+SAL1번에 있는 것은 SAL 컬럼의 다음 행을 보여준다.
 
 48.
 1.
