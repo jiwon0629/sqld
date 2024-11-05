@@ -72,17 +72,25 @@ SAL1[1100,950,3000,1300, 1600]
 해설) LEAD(SAL) 
 SAL1번에 있는 것은 SAL 컬럼의 다음 행을 보여준다.
 
-48.
-1.
-2.
-3.
-4. 
+48. 다음 SQL의 실행 결과는?
+SELECT 1 FROM DUAL UNION
+SELECT 2 FROM DUAL UNION
+SELECT 1 FROM DUAL;
+1. 1
+2. 1,2
+3. 2,1
+4. 1,2,1
+답 : 4번
+해설) 1, 2, 1이 있는데 UNION이니까 1, 2
 
-49.
-1.
-2.
-3.
-4. 
+49. 다음의 SQL 실행 결과는 무엇인가?
+SELECT sysdate + NULL FROM DUAL;
+1. 0
+2. 오늘 날짜가 조회된다.
+3. 내일 날짜가 조회된다.
+4. NULL
+답 : 4번
+해설) NULL에 어떠한 수를 더해도 NULL이다.
 
 50.
 1.
