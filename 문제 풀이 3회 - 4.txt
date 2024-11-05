@@ -63,12 +63,16 @@ C4 NUMBER DEFAULT 1000
 2. DELETE T_ORDER
 3. DELETE FROM T_ORDER
 4. UPDATE T_ORDER SET C1 = 1
-답 : 2번
+답 : 1번
+해설) 1번에 C4 데이터가 없다.
+2번도 FROM을 안 써도 되지만 쓰는게 관례
 
-37. 
-
-
-
+37. 다음 중 ORDER BY에 대한 특징으로 옳지 않은 것은?
+1. ORDER BY 속성에 숫자와 컬럼을 혼용하여 사용할 수 있다.
+2. SELECT 구문에 사용되지 않은 컬럼에도 ORDER BY 구문에서 사용할 수 있다.
+3. ORCLE은 NULL을 가장 큰 값으로 취급하고 SQL SERVER는 가장 작은 값으로 취급한다.
+4. ORDER BY 컬럼명에서 정렬 옵션을 주지 않은 경우에 내림차순이 된다.
+답 : 4번
 
 38. 
 
