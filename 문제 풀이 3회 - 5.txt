@@ -51,11 +51,13 @@ SQL3) SELECT GRADE, COUNT(*) FROM EMP GROUP BY GRADE;
 해설) 물리적인 서버 A와 B가 있을 때 각각 테이블을 중복시키면 A 서버와 B 서버 간의 원격 조인을 제거할 수 있다.
 단, 이러한 방식은 데이터 무결성 및 보안 관리의 문제점을 유발한다.
 
-46.
-1.
-2.
-3.
-4. 
+46. SELECT UPPER('sqldeveloper') FROM DUAL;의 결과적으시오.
+1. SQLDeveloper
+2. SQLDEVELOPER
+3. sqldeveloper
+4. SqlDeveloper
+답 : 2번
+해설) UPPER는 문자열을 대문자로 변환하는 연산자
 
 47.
 1.
