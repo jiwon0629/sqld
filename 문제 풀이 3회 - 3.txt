@@ -30,7 +30,22 @@ SELECT COUNT(C1) FROM Mytest
 고립성(Isolation) : 트랜잭션 실행 도중에 다른 트랜잭션이 영향을 주면 안됨
 지속성(Durability) : 트랜잭션이 성공적으로 수행되면, 영구적으로 DB에 저장되어야 함
 
-25.
+25. 다음 주어진 테이블에 대해서 아래의 SQL문을 수행하였을 때의 결과로 알맞은 것은?
+MyA테이블 COL1[10,10,20,20,25,30,50,60]
+MyB테이블 COL1[10,20,30,40,50]
+SQL문
+SELECT COUNT(*) FROM(
+SELECT DISTINCT COL1
+FROM MyA UNION ALL
+SELECT COL1
+FROM MyB);
+1. 4
+2. 10
+3. 12
+4. 11
+답 : 4번
+
+26. 다음의 
 
 
 
