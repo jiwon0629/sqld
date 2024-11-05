@@ -43,15 +43,27 @@ WHERE EMP_NAME LIKE 'K%';
 해설) 테이블명과 컬럼명은 바드시 문자로 시작해야 한다.
 테이블과 컬럼명으로 사용되는 글자는 A-Z, a-z, 0-9, _, $, #만 허용된다.
 
-35. 
+35. 다음 중 반올림을 수행하는 함수는?
+1. ROUND
+2. CEIL
+3. TRUNC
+4.NULLIF
+답 : 1번
+해설) ROUND(숫자, M)
+소수점 M 자리까지 반올림한다.
+CEIL은 올림함수, TRUNC는 내림함수, NULLIF는 두 수 비교해서 똑같으면 NULL 반환
 
-
-
-
-36. 
-
-
-
+36. 다음 SQL문을 실행했을 때 오류가 발생하는 것은?
+CREATE TABLE T_ORDER(
+C1 NUMBER(10),
+C2 DATE, C3 VARCHAR(10),
+C4 NUMBER DEFAULT 1000
+);
+1. INSERT INTO T_ORDER VALUES(2, SYSDATE-1, 'ABC')
+2. DELETE T_ORDER
+3. DELETE FROM T_ORDER
+4. UPDATE T_ORDER SET C1 = 1
+답 : 2번
 
 37. 
 
