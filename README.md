@@ -20,4 +20,4 @@ SQL 기본 및 활용 - 40문항 (배점 80점 / 문항당 2점)
 
 헷갈리는 것들 WINDOW함수 ROLLUP, CUBE, GROUPING SETS
 
-RANK()
+RANK(), DENSE_RANK()
