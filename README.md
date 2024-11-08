@@ -19,3 +19,5 @@ SQL 기본 및 활용 - 40문항 (배점 80점 / 문항당 2점)
  - 관리 구문 : DML, TCL, DDL, DCL  
 
 헷갈리는 것들 WINDOW함수 ROLLUP, CUBE, GROUPING SETS
+
+RANK()
