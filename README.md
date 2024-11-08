@@ -18,4 +18,4 @@ SQL 기본 및 활용 - 40문항 (배점 80점 / 문항당 2점)
  - SQL 활용 : 서브쿼리, 집합 연산자, 그룹 함수, 윈도우 함수, Top N 쿼리, 계층형 질의와 셀프 조인, PIVOT절과 UNPIVOT절, 정규 표현식
  - 관리 구문 : DML, TCL, DDL, DCL  
 
-헷갈리는 것들 WINDOW함수
+헷갈리는 것들 WINDOW함수 ROLLUP, CUBE, GROUPING SETS
