@@ -22,7 +22,7 @@ SQL 기본 및 활용 - 40문항 (배점 80점 / 문항당 2점)
 
 RANK(), DENSE_RANK(), ROW_NUMBER, LAG, LEAD,   
 
-DML - INSERT, DELETE, UPDATE, SELECT  
+
 DCL - GRANT, REVOKE  
 TCL - COMMIT, ROLLBACK  
   
