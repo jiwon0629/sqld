@@ -47,7 +47,7 @@ WHERE EMP_NAME LIKE 'K%';
 1. ROUND
 2. CEIL
 3. TRUNC
-4.NULLIF
+4. NULLIF
 답 : 1번
 해설) ROUND(숫자, M)
 소수점 M 자리까지 반올림한다.
