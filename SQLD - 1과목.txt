@@ -192,7 +192,8 @@ M:N 관계
 
 트랜잭션이란
  - 하나의 연속적인 업무 단위를 말함
- - SELECT, INSERRT, DELETE, UPDATE
+
+- SELECT, INSERRT, DELETE, UPDATE
 
 NULL이란
 DBMS에서 아직 정해지지 않은 값
@@ -224,6 +225,7 @@ NULL의 특징
 IE 표기법
 - 원을 사용하여 필수적 관계와 선택적 관계를 구분
 - 필수적 관계에는 원을 그리지 않는다.
+- 선택적 관계에는 관계선 끝에 원을 그린다.
 
 Barker 표기법
 #은 식별자를 의미
