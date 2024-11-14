@@ -91,8 +91,29 @@
 4. SELECT절에 DISTINCT는 항상 SELECT 바로 뒤에 위치한다.
 답 : 3번
 
-13. 
+12. SQL의 종류와 해당되는 명령어를 연결한 것 중 틀린 것은?
+1. DML - TRUNCATE
+2. TCL - COMMIT
+3. DCL - GRANT
+4. DDL - ALTER
+답 : 1번
+해설) TRUNCATE는 DDL이다.
 
+13. SQL문을 실행했을 때 오류가 발생하는 부분으로 가장 적절한 것은?(/)
+1. SELECT DEPTNO, ROUND(AVG(SAL)) AS ROUND_VALUE
+2. FROM EMP E
+3. WHERE ROUND_VALUE >=2000
+4. GROUP BY DEPTNO;
+답 : 3번
+
+14. 다음의 함수 실행 결과 중 틀린 것은?
+1. SUBSTR('WWW.HDATALAB.CO.KR' , -5) : 'CO.KR'
+2. LPAD('X', 5, 'X') : 'XXXXXX'
+3. INSTR('WWW.HDATALAB.CO.KR', '.', 5, 2) : 16
+4. LTRIM('ABABAA', 'A') : 'BABAA'
+답 : 2번
+해설) INSTR은 위치 찾기 5번째부터 .의 2번째 위치 찾기 16번째
+LTRIM은 왼쪽부터 A를 제거하다가 A가 아니면 멈춤
 
 
 
