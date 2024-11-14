@@ -134,8 +134,18 @@ COMM[NULL, 500]
 해설) ISNULL은 COMM이 NULL이면 100을 반환하고 아니면 그 수를 반환한다.
 COALESCE(COMM, 100)은 COMM이 NULL이면 그 다음 수 반환
 
+17. 다음 쿼리의 실행 결과로 알맞은 것은?(/)
+TAB1테이블 SAL[3000, 3500, 4000, 4200, 6000]
+SQL문
+SELECT SUM(DECODE(SIGN(SAL-4000), 1, 1, 0))
+FROM TAB1;
+1. 0
+2. 1
+3. 2
+4. 3
+답 : 3번
 
-
+18. 
 
 
 
