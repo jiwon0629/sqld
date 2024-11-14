@@ -272,9 +272,20 @@ SELECT SAL FROM TAB1 ORDER BY TO_CHAR(SAL);
 답 : 1번
 해설) 숫자를 TO_CHAR하면 앞자리에서부터 숫자가 큰 것이 뒤로 간다.
 
-
-
-
+28. 아래의 SQL의 결과로 알맞은 것은?
+TAB1테이블 COL1[1,2,3,4], COL2[A, _, B, C]
+TAB2테이블 COL1[1,2,3], COL2[A, _, B]
+SELECT SUM(A.COL1) FROM TAB1 A, TAB2 B WHERE A.COL2 <> B.COL2;
+1. 8
+2. 10
+3. 12
+4. 30
+답 : 3번
+해설) TAB1의 1 A와 TAB2의 3  B
+TAB1의 3 B와 TAB2의 1  A
+TAB1의 4 C와 TAB2의 1  A
+TAB1의 4 C와 TAB2의 3  B
+NULL은 비교할 수 없으니 아예 제외한다.
 
 
 
