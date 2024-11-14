@@ -229,14 +229,23 @@ SELECT SUM(COL2) + SUM(COL3) FROM TAB1 WHERE COL1 IS NULL;
 4. 1000, NULL, 400, 600
 답 : 4번
 
-24. 다음 중 GROUP BY 절 대한 설명 중 틀린 것은?
+24. 다음 중 GROUP BY 절 대한 설명 중 틀린 것은?(/)
 1. GROUP BY절에는 컬럼 별칭을 사용할 수 없다.
 2. GROUP BY절에는 그룹함수를 사용할 수 없다.
 3. GROUP BY절에 명시되지 않은 컬럼을 그룹함수 없이 SELECT절에 사용할 수 없다.
 4. GROUP BY절에 나열되는 컬럼 순서에 따라 SELECT절의 그룹함수의 연산 결과가 달라질 수 있다.
 답 : 4번
 
-
+25. 아래 SQL 수행 결과로 가장 적절한 것은?
+TAB1테이블 COL1[100, NULL, 0], COL2[NULL, 200, 300], COL3[100, 400, NULL]
+SELECT COUNT(*) AS RESULT FROM TAB1 WHERE COL1 = 200 CROUP BY COL1;
+SELECT SUM(COL2) AS RESULT FROM TAB1 WHERE COL1 = 100;
+SELECT COUNT(COL1) AS RESULT FROM TAB1 WHERE COL3 = 400;
+1. 0, 0, 0
+2. _, _, 0
+3.  , , _
+4.  , _, 0
+답 : 4번
 
 
 
