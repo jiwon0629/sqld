@@ -381,7 +381,9 @@ SUM((SELECT 가격 FROM 서비스 WHERE 서비스구매.서비스 번호
 INNER JOIN 서비스 구매 ON 고객.고객번호 = 서비스구매.고객번호 GROUP BY 고객.성별;
 답 : 2번
 
-36
+36. (/)
+답 : 1번
+해설)DEPTNO, DEPARTMENT_ID의 데이터타입이 맞지 않음 
 
 
 
