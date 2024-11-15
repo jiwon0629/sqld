@@ -367,8 +367,21 @@ WHERE TAB2.COL1 = 'A');
 1. SELECT 고객.성별, COUNT(서비스.서비스번호)AS CNT, SUM(서비스.가격) AS SUM_PRICE
 FROM 고객, 서비스구매, 서비스 WHERE 고객.고객번호 = 서비스구매.고객번호
 AND 서비스 구매.서비스번호 = 서비스.서비스번호 GROUP BY 고객.성별;
+2. SELECT 고객.성별, COUNT(고객.고객번호)AS CNT, SUM(서비스.가격) AS SUM_PRICE
+FROM 고객 LEFT OUTER JOIN 서비스구매 ON 고객.고객번호 = 서비스구매.고객번호
+LEFT OUTER JONI 서비스 ON 서비스구매.서비스번호 = 서비스.서비스번호 GROUP BY 고객.성별;
+3. SELECT 고객.성별, COUNT(I.SNO)AS CNT, SUM(I.가격) AS SUM_PRICE
+FROM 고객 INNER JOIN (SELECT 서비스구매.고객번호 AS GNO, 서비스.서비스번호 AS SNO,
+서비스.가격 FROM 서비스구매 INNER JOIN 서비스 ON 서비스구매.서비스번호 = 서비스.서비스번호) 
+ON 고객.고객번호 = I.GNO GROUP BY 고객.성별;
+4. SELECT 고객.성별, COUNT((SELECT 서비스번호 FROM 서비스
+WHERE 서비스구매.서비스번호 = 서비스.서비스번호)) AS CNT,
+SUM((SELECT 가격 FROM 서비스 WHERE 서비스구매.서비스 번호
+ = 서비스.서비스번호))AS SUM_PRICE FROM 고객
+INNER JOIN 서비스 구매 ON 고객.고객번호 = 서비스구매.고객번호 GROUP BY 고객.성별;
+답 : 2번
 
-
+36
 
 
 
