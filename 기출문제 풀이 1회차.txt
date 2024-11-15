@@ -324,7 +324,7 @@ N1[2, 4], V1[_, C]
 답 : 2번
 해설) NOT으로 전체 거짓이므로 아무것도 출력되지 않는다.
 
-32. 아래와 같은 테이블이 있다. 다음 SQL 실행 결과로 올바른 것은?
+32. 아래와 같은 테이블이 있다. 다음 SQL 실행 결과로 올바른 것은?(/)
 EMPLOYEES테이블 EMPNO[1,2,3,4,5,6], DEPTNO[NULL,10,20,30,40,50],
 HIREDATE[1998/12/23, 2001/05/06, 2020/01/16, 2020/02/01, 2020/02/28, 2023/06/07]
 SELECT COUNT(DEPTNO) FROM EMPLOYEES
@@ -334,9 +334,39 @@ WHERE HIREDATE >= TO_DATE('2020/02', 'YYYY/MMM'));
 2. 3
 3. 4
 4. 5
+답 : 2번
+해설) DEPTNO 30,40,50이니까 10, 20, 30 
 
+33. 다음 SQL 중 정상 수행이 불가한 것은?(/)
+1. SELECT * FROM TAB1 A
+WHERE NOT EXISTS (SELECT 'X' 
+FROM TAB2 B WEHRE A.NO = B.NO);
+2. SELECT A.NO, (SELECT B.NAME
+FROM TAB2 B) FROM TAB1 A WHERE A.NO = B.NO;
+3. SELECT A.NO FROM TAB1 A JOIN TAB2 B USING (NO);
+4. UPDATE TAB1 A SET A.NAME = (SELECT B.NAME
+FROM TAB2 B WHERE A.NO = B.NO);
+답 : 2번
 
+34. 아래의 SQL의 출력 결과 중 알맞은 것은?(/)
+TAB1테이블 COL1[A,B,C], COL2[10,20,30]
+TAB2테이블 COL1[B,C,D], COL2[20,30,40]
+SELECT COUNT(*) FROM TAB1
+WHERE EXISTS(SELECT 1 FROM TAB2
+WHERE TAB2.COL1 = 'A');
+1. NULL
+2. 0
+3. 1
+4. 3
+답 : 2번
 
+35. 다음 ERD를 보고, 고객의 성별로 서비스 이용횟수와 이용금액의 총합을 출력하는 SQL로 적절하지 않은 것은?
+고객테이블[고객번호(PK), 이름, 성별, 전화번호]
+서비스 구매 테이블[고객번호(FK), 서비스번호(FK), 이용날짜]
+서비스 테이블[서비스 번호(PK), 서비스명, 가격]
+1. SELECT 고객.성별, COUNT(서비스.서비스번호)AS CNT, SUM(서비스.가격) AS SUM_PRICE
+FROM 고객, 서비스구매, 서비스 WHERE 고객.고객번호 = 서비스구매.고객번호
+AND 서비스 구매.서비스번호 = 서비스.서비스번호 GROUP BY 고객.성별;
 
 
 
