@@ -444,7 +444,8 @@ LAST_VALUE는 파티션 내의 마지막 값이니까 항상 자기 자신이 �
 해설) NUMBER(5,2) -> xxx.xx OR xx.xxx이다. 
 VARCHAR은 숫자도 가능
 
-
+50.
+답 : 2번
 
 
 
